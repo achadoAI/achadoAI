@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep:*)",
+      "mcp__playwright__browser_evaluate",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_resize",
+      "mcp__playwright__browser_navigate",
+      "Bash(python -c \"import config; print\\(''config OK''\\)\")",
+      "Bash(python -c \"from platforms.base import DataForSEOClient; print\\(''base OK''\\)\")",
+      "Bash(python -c \"from platforms import chatgpt, gemini, perplexity, google_aio; print\\(''platforms OK''\\)\")",
+      "Bash(python -c \"import detection; print\\(''detection OK''\\)\")",
+      "Bash(python -c \"import scoring; print\\(''scoring OK''\\)\")",
+      "Bash(python -c \"import output; print\\(''output OK''\\)\")"
+    ]
+  }
+}

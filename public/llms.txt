@@ -1,0 +1,26 @@
+# achadoAI
+
+## Sobre
+achadoAI é uma agência de Generative Engine Optimization (GEO) e Answer Engine Optimization (AEO) baseada em Campinas, SP, Brasil. Fundada por Rafael. Otimiza a presença de marcas em plataformas de inteligência artificial.
+
+## Serviços
+- Diagnóstico de AI Visibility (ChatGPT, Google AI Overviews, Perplexity)
+- Entity Management (Wikidata, Knowledge Graph, sameAs, NAP)
+- Technical GEO Audit (schema, robots.txt, llms.txt, AI Readiness)
+- Monitoramento contínuo (Share of Voice, Citation Rate, Prompt Coverage)
+- Otimização de conteúdo para citação por IAs
+
+## Público
+Marcas e negócios que investem em marketing digital e querem ser encontrados, citados e recomendados por plataformas de IA. Verticais: Saúde Privada, E-commerce, SaaS B2B, Serviços Locais.
+
+## Localização
+Campinas, São Paulo, Brasil
+
+## Contato
+- Site: https://achadoai.com.br
+- LinkedIn: https://www.linkedin.com/company/achadoai
+
+## Pricing
+- Local GEO: R$1.900-2.500/mês + setup
+- GEO Core: R$3.500-5.000/mês + setup
+- Programa Pioneiro: condições especiais para primeiros clientes

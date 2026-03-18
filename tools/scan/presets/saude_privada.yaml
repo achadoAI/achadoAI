@@ -1,0 +1,25 @@
+vertical: saude_privada
+description: "Preset para clínicas e consultórios de saúde privada"
+default_city: "Campinas"
+
+# Keywords template — usar {especialidade} e {cidade} como placeholders
+keyword_templates:
+  - "melhor {especialidade} em {cidade}"
+  - "{especialidade} {cidade} preço"
+  - "clínica de {especialidade} {cidade}"
+
+# Especialidades comuns para sugerir
+especialidades:
+  - dermatologista
+  - dentista
+  - oftalmologista
+  - ortodontista
+  - cirurgião plástico
+  - nutricionista
+  - fisioterapeuta
+
+# Concorrentes conhecidos no ecossistema (para enriquecer detecção)
+known_aggregators:
+  - doctoralia.com.br
+  - boavidasaude.com.br
+  - medico123.com.br

@@ -1,26 +1,290 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Cores principais */
+  --navy: #1a1f36;
+  --text-primary: #0f172a;
+  --green-accent: #22c55e;
+  --green-hover: #10b981;
+  --green-cta: #059669;
+  --green-cta-hover: #047857;
+  --amber-alert: #f59e0b;
+  --red-soft: #ef4444;
+  --bg-primary: #ffffff;
+  --bg-alt: #f8fafc;
+  --bg-card: #f1f5f9;
+  --text-secondary: #64748b;
+  --text-placeholder: #94a3b8;
+  --border-light: #e2e8f0;
+
+  /* Fonts */
+  --font-display: var(--font-plus-jakarta-sans);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-navy: var(--navy);
+  --color-text-primary: var(--text-primary);
+  --color-green-accent: var(--green-accent);
+  --color-green-hover: var(--green-hover);
+  --color-green-cta: var(--green-cta);
+  --color-green-cta-hover: var(--green-cta-hover);
+  --color-amber-alert: var(--amber-alert);
+  --color-red-soft: var(--red-soft);
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-alt: var(--bg-alt);
+  --color-bg-card: var(--bg-card);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-placeholder: var(--text-placeholder);
+  --color-border-light: var(--border-light);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-display: var(--font-plus-jakarta-sans);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body), system-ui, sans-serif;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Typography */
+h1, h2, h3 {
+  text-wrap: balance;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 100;
+  padding: 0.75rem 1.5rem;
+  background: var(--green-accent);
+  color: white;
+  font-weight: 600;
+  border-radius: 0.5rem;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+/* Tabular nums for data */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Keyframes */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scan-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes progress-bar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 22%;
+  }
+}
+
+@keyframes border-pulse {
+  0%, 100% {
+    border-color: var(--green-accent);
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Animation classes */
+.animate-fade-in-up {
+  animation: fade-in-up 400ms ease both;
+}
+
+.animate-fade-in {
+  animation: fade-in 300ms ease both;
+}
+
+.animate-scan-pulse {
+  animation: scan-pulse 2s ease-in-out infinite;
+}
+
+.animate-progress-bar {
+  animation: progress-bar 1.5s ease-out both;
+}
+
+.animate-border-pulse {
+  animation: border-pulse 1.5s ease-in-out 1;
+}
+
+/* Staggered fade-in-up for comparison rows */
+@keyframes stagger-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-stagger-row {
+  opacity: 0;
+  animation: stagger-fade-in-up 400ms ease both;
+}
+
+@keyframes navy-border-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+.animate-navy-pulse {
+  animation: navy-border-pulse 1s ease-out 1;
+}
+
+@keyframes pricing-pioneer-pulse {
+  0% {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 0 0 rgba(34, 197, 94, 0.2);
+  }
+  50% {
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.14), 0 0 0 10px rgba(34, 197, 94, 0);
+  }
+  100% {
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12), 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+/* Timeline progressive fill */
+@keyframes timeline-fill {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.animate-timeline-fill {
+  animation: timeline-fill 1.2s ease-out both;
+  transform-origin: left center;
+}
+
+@keyframes timeline-fill-vertical {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.animate-timeline-fill-vertical {
+  animation: timeline-fill-vertical 1.2s ease-out both;
+  transform-origin: top center;
+}
+
+/* Process step staggered entry */
+.process-step {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.process-step.is-visible {
+  animation: fade-in-up 400ms ease both;
+}
+
+.process-step.is-visible:nth-child(1) { animation-delay: 0ms; }
+.process-step.is-visible:nth-child(2) { animation-delay: 150ms; }
+.process-step.is-visible:nth-child(3) { animation-delay: 300ms; }
+.process-step.is-visible:nth-child(4) { animation-delay: 450ms; }
+
+/* Tab fade-in */
+@keyframes tab-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-tab-fade-in {
+  animation: tab-fade-in 200ms ease both;
+}
+
+/* Hide scrollbar for horizontal scroll tabs */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up,
+  .animate-fade-in,
+  .animate-scan-pulse,
+  .animate-progress-bar,
+  .animate-border-pulse,
+  .animate-stagger-row,
+  .animate-navy-pulse,
+  .animate-timeline-fill,
+  .animate-timeline-fill-vertical,
+  .animate-tab-fade-in,
+  .process-step.is-visible {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
