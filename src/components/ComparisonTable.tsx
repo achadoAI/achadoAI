@@ -24,7 +24,7 @@ function CheckIcon() {
 
 export function ComparisonTable() {
   return (
-    <div className="mx-auto max-w-[900px]">
+    <div className="w-full max-w-none">
       {/* Desktop Table */}
       <div
         className="hidden overflow-hidden rounded-2xl border border-border-light shadow-[0_2px_12px_rgba(0,0,0,0.04),0_8px_32px_rgba(0,0,0,0.06)] md:block"
@@ -32,22 +32,25 @@ export function ComparisonTable() {
         aria-label="Comparação entre Agência de SEO e achadoAI"
       >
         {/* Header row */}
-        <div className="grid grid-cols-[200px_1fr_1fr]" role="row">
+        <div
+          className="grid grid-cols-[180px_1fr_1fr] lg:grid-cols-[200px_1fr_1.05fr] xl:grid-cols-[220px_1fr_1.1fr]"
+          role="row"
+        >
           <div
             role="columnheader"
-            className="bg-white px-6 py-5 font-display text-sm font-semibold text-text-secondary"
+            className="bg-white px-5 py-5 font-display text-sm font-semibold text-text-secondary xl:px-6"
           >
             Capacidade
           </div>
           <div
             role="columnheader"
-            className="border-l border-border-light bg-bg-alt px-6 py-5 font-display text-sm font-semibold text-text-secondary"
+            className="border-l border-border-light bg-bg-alt px-5 py-5 font-display text-sm font-semibold text-text-secondary xl:px-6"
           >
             Agência de SEO
           </div>
           <div
             role="columnheader"
-            className="relative animate-navy-pulse rounded-tr-2xl border-l border-navy bg-navy px-6 py-5 font-display text-sm font-semibold text-white"
+            className="relative animate-navy-pulse rounded-tr-2xl border-l border-navy bg-navy px-5 py-5 font-display text-sm font-semibold text-white xl:px-6"
           >
             {/* Green accent line on top of achadoAI column */}
             <div
@@ -67,24 +70,24 @@ export function ComparisonTable() {
           <div
             key={row.capability}
             role="row"
-            className="animate-stagger-row grid grid-cols-[200px_1fr_1fr] border-t border-border-light"
+            className="animate-stagger-row grid grid-cols-[180px_1fr_1fr] border-t border-border-light lg:grid-cols-[200px_1fr_1.05fr] xl:grid-cols-[220px_1fr_1.1fr]"
             style={{ animationDelay: `${index * 100}ms` }}
           >
             <div
               role="rowheader"
-              className="bg-white px-6 py-4 font-display text-sm font-semibold text-text-primary"
+              className="bg-white px-5 py-4 font-display text-sm font-semibold text-text-primary xl:px-6"
             >
               {row.capability}
             </div>
             <div
               role="cell"
-              className="border-l border-border-light bg-bg-alt px-6 py-4 font-body text-sm text-text-secondary"
+              className="border-l border-border-light bg-bg-alt px-5 py-4 font-body text-sm text-text-secondary xl:px-6"
             >
               {row.seo}
             </div>
             <div
               role="cell"
-              className="border-l border-navy bg-navy px-6 py-4 font-body text-sm text-white/90"
+              className="border-l border-navy bg-navy px-5 py-4 font-body text-sm text-white/90 xl:px-6"
             >
               <span className="flex items-start">
                 <CheckIcon />
@@ -95,7 +98,10 @@ export function ComparisonTable() {
         ))}
 
         {/* Bottom cap with green accent */}
-        <div className="grid grid-cols-[200px_1fr_1fr]" aria-hidden="true">
+        <div
+          className="grid grid-cols-[180px_1fr_1fr] lg:grid-cols-[200px_1fr_1.05fr] xl:grid-cols-[220px_1fr_1.1fr]"
+          aria-hidden="true"
+        >
           <div className="h-1 bg-white" />
           <div className="h-1 border-l border-border-light bg-bg-alt" />
           <div className="relative h-1 rounded-br-2xl border-l border-navy bg-navy">

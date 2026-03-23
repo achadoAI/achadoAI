@@ -147,14 +147,14 @@ interface FeatureCardProps {
 
 export function FeatureCard({ feature }: FeatureCardProps) {
   return (
-    <div className="group flex flex-col rounded-xl border border-border-light bg-white p-5 transition-[border-color,box-shadow] duration-200 hover:border-green-accent/40 hover:shadow-lg hover:shadow-green-accent/5 cursor-pointer sm:p-6">
-      <div className="mb-4 overflow-hidden rounded-lg bg-bg-alt p-2.5 sm:p-3">
+    <div className="group flex flex-col rounded-xl border border-border-light bg-white p-5 transition-[border-color,box-shadow] duration-200 hover:border-green-accent/40 hover:shadow-lg hover:shadow-green-accent/5 cursor-pointer sm:p-6 lg:p-5 xl:p-6">
+      <div className="mb-4 overflow-hidden rounded-lg bg-bg-alt p-2.5 sm:p-3 lg:mb-3">
         <MiniViz type={feature.vizType} />
       </div>
-      <h3 className="font-display text-lg font-semibold text-text-primary sm:text-xl">
+      <h3 className="font-display text-lg font-semibold text-text-primary sm:text-xl lg:text-[19px] xl:text-xl">
         {feature.title}
       </h3>
-      <p className="mt-2 flex-1 font-body text-sm leading-relaxed text-text-secondary sm:text-[15px]">
+      <p className="mt-2 flex-1 font-body text-sm leading-relaxed text-text-secondary sm:text-[15px] lg:text-[14px] lg:leading-[1.65] xl:text-[15px] xl:leading-relaxed">
         {feature.description}
       </p>
     </div>

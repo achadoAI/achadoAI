@@ -210,20 +210,20 @@ export default function PricingSection() {
           className="pointer-events-none absolute inset-x-10 top-8 -z-10 h-40 rounded-full bg-[radial-gradient(circle_at_center,_rgba(34,197,94,0.08),_transparent_70%)] blur-2xl"
         />
 
-        <div className="mx-auto max-w-[760px] text-center">
+        <div className="mx-auto max-w-[760px] text-center xl:max-w-[920px]">
           <h2
             id="pricing-heading"
-            className="font-display text-2xl font-bold leading-[1.15] text-text-primary sm:text-[30px] md:text-[34px] lg:text-[40px]"
+            className="font-display text-2xl font-bold leading-[1.15] text-text-primary sm:text-[30px] md:text-[34px] lg:text-[38px] xl:text-[42px]"
           >
             {pricingHeadline}
           </h2>
-          <p className="mt-3 font-body text-sm leading-[1.6] text-text-secondary sm:mt-4 sm:text-[15px] md:text-[16px]">
+          <p className="mt-3 font-body text-sm leading-[1.6] text-text-secondary sm:mt-4 sm:text-[15px] md:text-[16px] lg:text-[17px] lg:leading-[1.7]">
             {pricingSubtitle}
           </p>
         </div>
 
         <div
-          className="mt-10 grid grid-cols-1 gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3"
+          className="mt-10 grid grid-cols-1 gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-5 xl:gap-6"
           aria-labelledby="pricing-heading"
         >
           {plans.map((plan, index) => {
@@ -235,7 +235,7 @@ export default function PricingSection() {
             return (
               <article
                 key={plan.id}
-                className={`${plan.orderClassName} flex h-full flex-col rounded-2xl bg-white px-5 py-6 shadow-[0_1px_3px_rgba(0,0,0,0.06)] transition-[box-shadow,border-color] duration-200 hover:shadow-[0_4px_12px_rgba(0,0,0,0.1)] sm:px-6 sm:py-8 lg:px-7 ${
+                className={`${plan.orderClassName} flex h-full flex-col rounded-2xl bg-white px-5 py-6 shadow-[0_1px_3px_rgba(0,0,0,0.06)] transition-[box-shadow,border-color] duration-200 hover:shadow-[0_4px_12px_rgba(0,0,0,0.1)] sm:px-6 sm:py-8 lg:px-6 lg:py-7 xl:px-7 xl:py-8 ${
                   isHighlighted
                     ? "relative border-2 border-green-accent lg:-mt-2"
                     : "border border-border-light"
@@ -261,7 +261,7 @@ export default function PricingSection() {
                 <div className="mt-6">
                   <h3
                     id={`${plan.id}-title`}
-                    className="font-display text-[18px] font-bold leading-[1.2] text-text-primary sm:text-[20px] lg:text-[24px]"
+                    className="font-display text-[18px] font-bold leading-[1.2] text-text-primary sm:text-[20px] lg:text-[22px] xl:text-[24px]"
                   >
                     {plan.name}
                   </h3>
@@ -270,7 +270,7 @@ export default function PricingSection() {
                     {plan.priceLines.map((priceLine) => (
                       <p
                         key={priceLine}
-                        className="font-mono text-[24px] font-bold leading-[1.15] text-text-primary sm:text-[28px] lg:text-[36px]"
+                        className="font-mono text-[24px] font-bold leading-[1.15] text-text-primary sm:text-[28px] lg:text-[32px] xl:text-[36px]"
                       >
                         {priceLine}
                       </p>
@@ -296,11 +296,11 @@ export default function PricingSection() {
                     </p>
                   ) : null}
 
-                  <ul className="space-y-3" aria-label={`Benefícios do plano ${plan.name}`}>
+                  <ul className="space-y-3 lg:space-y-2.5" aria-label={`Benefícios do plano ${plan.name}`}>
                     {plan.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3">
                         <CheckIcon />
-                        <span className="font-body text-[14px] leading-[1.6] text-text-primary sm:text-[15px]">
+                        <span className="font-body text-[14px] leading-[1.6] text-text-primary sm:text-[15px] lg:text-[14px] lg:leading-[1.55] xl:text-[15px] xl:leading-[1.6]">
                           {feature}
                         </span>
                       </li>
@@ -349,7 +349,7 @@ export default function PricingSection() {
           })}
         </div>
 
-        <div className="mx-auto mt-10 max-w-[980px] text-center">
+        <div className="mx-auto mt-8 max-w-[980px] text-center lg:mt-9 xl:mt-10 xl:max-w-[1080px]">
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2.5 text-text-secondary sm:gap-x-5 sm:gap-y-3">
             {pricingFooterItems.map((item, index) => {
               const Icon = footerIcons[index];
@@ -366,7 +366,7 @@ export default function PricingSection() {
             })}
           </div>
 
-          <p className="mx-auto mt-4 max-w-[760px] font-body text-[13px] leading-[1.6] text-text-placeholder">
+          <p className="mx-auto mt-4 max-w-[760px] font-body text-[13px] leading-[1.6] text-text-placeholder xl:max-w-[860px]">
             {pricingNote}
           </p>
         </div>

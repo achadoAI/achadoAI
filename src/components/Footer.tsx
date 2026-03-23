@@ -3,7 +3,7 @@ import { footerContent } from "@/data/footer";
 export function Footer() {
   return (
     <footer className="border-t border-white/5 bg-navy-light py-12 sm:py-14 md:py-16">
-      <div className="mx-auto max-w-[1200px] px-4 sm:px-6 md:px-8 lg:px-0">
+      <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 md:px-8 lg:max-w-[1280px] lg:px-0 2xl:max-w-[1440px]">
         <div className="grid grid-cols-1 gap-8 sm:gap-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-12">
           {/* About — entity-friendly block */}
           <div className="lg:col-span-2">

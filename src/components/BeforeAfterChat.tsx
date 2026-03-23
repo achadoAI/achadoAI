@@ -390,7 +390,7 @@ export function BeforeAfterChat() {
   const { before, after } = beforeAfterData;
 
   return (
-    <div className="flex flex-col gap-4 sm:gap-6 lg:flex-row lg:items-stretch lg:gap-8">
+    <div className="flex flex-col gap-4 sm:gap-6 lg:flex-row lg:items-stretch lg:gap-6 xl:gap-8">
       <BeforeCard
         label={before.label}
         searchQuery={before.searchQuery}

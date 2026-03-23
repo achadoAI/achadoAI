@@ -91,23 +91,26 @@ const stepIcons = [SearchIcon, WrenchIcon, BarChartIcon, CheckCircleIcon] as con
 
 export default function HowItWorksSection() {
   return (
-    <section id="como-funciona" className="scroll-mt-20 bg-bg-alt py-12 sm:py-14 md:py-24">
-      <div className="mx-auto max-w-[1200px] px-4 sm:px-6 md:px-8 lg:px-0">
+    <section
+      id="como-funciona"
+      className="scroll-mt-20 bg-bg-alt py-12 sm:py-14 md:py-24 lg:py-20 xl:py-24"
+    >
+      <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 md:px-8 lg:max-w-[1280px] lg:px-0 2xl:max-w-[1440px]">
         <div className="text-center">
-          <h2 className="font-display text-2xl font-bold leading-[1.15] text-text-primary sm:text-[28px] md:text-4xl lg:text-[40px]">
+          <h2 className="font-display text-2xl font-bold leading-[1.15] text-text-primary sm:text-[28px] md:text-4xl lg:text-[38px] xl:text-[42px]">
             {processHeadline}
           </h2>
-          <p className="mt-3 font-body text-sm text-text-secondary sm:mt-4 sm:text-base md:text-lg">
+          <p className="mt-3 font-body text-sm text-text-secondary sm:mt-4 sm:text-base md:text-lg lg:text-[17px] lg:leading-[1.7]">
             {processSubtitle}
           </p>
         </div>
 
         <div
-          className="mt-16 hidden lg:block"
+          className="mt-12 hidden lg:block xl:mt-14"
           role="list"
           aria-label="Etapas do processo"
         >
-          <div className="relative grid grid-cols-4 gap-6">
+          <div className="relative grid grid-cols-4 gap-5 xl:gap-6">
             <div
               className="absolute left-[12.5%] right-[12.5%] top-7 z-0 h-0.5 bg-border-light"
               aria-hidden="true"
@@ -126,7 +129,7 @@ export default function HowItWorksSection() {
                   key={step.number}
                   role="listitem"
                   aria-label={`Etapa ${step.number}: ${step.title}`}
-                  className="process-step is-visible relative flex flex-col items-center text-center"
+                  className="process-step is-visible relative flex flex-col items-center px-2 text-center"
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
                   <div className="relative z-10 rounded-full bg-bg-alt">
@@ -148,11 +151,11 @@ export default function HowItWorksSection() {
                     {step.title}
                   </h3>
 
-                  <p className="mt-2 font-body text-[15px] leading-relaxed text-text-secondary">
+                  <p className="mt-2 font-body text-[15px] leading-relaxed text-text-secondary lg:leading-[1.65]">
                     {step.description}
                   </p>
 
-                  <span className="mt-4 inline-block rounded-full bg-bg-card px-4 py-1.5 font-body text-[13px] text-text-secondary">
+                  <span className="mt-3 inline-block rounded-full bg-bg-card px-4 py-1.5 font-body text-[13px] text-text-secondary">
                     {step.deliverable}
                   </span>
                 </div>
@@ -301,7 +304,7 @@ export default function HowItWorksSection() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center gap-2">
+        <div className="mt-12 flex flex-col items-center gap-2 lg:mt-8 xl:mt-10">
           <a
             href={CALENDLY_URL}
             data-track-event="cta_click"

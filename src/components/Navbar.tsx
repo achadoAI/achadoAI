@@ -58,7 +58,7 @@ export function Navbar() {
       }`}
       aria-label="Navegacao principal"
     >
-      <div className="mx-auto flex max-w-[1200px] items-center justify-between px-4 py-3 sm:px-6 sm:py-4 md:px-8 lg:px-0">
+      <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-4 py-3 sm:px-6 sm:py-4 md:px-8 lg:max-w-[1280px] lg:px-0 2xl:max-w-[1440px]">
         <a
           href="#"
           className={`font-display text-lg font-bold transition-colors duration-300 sm:text-xl ${

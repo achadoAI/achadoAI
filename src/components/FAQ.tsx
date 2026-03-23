@@ -12,11 +12,11 @@ export function FAQ() {
       />
       <SectionShell id="faq" background="alt">
         <div className="text-center">
-          <h2 className="font-display text-2xl font-bold text-text-primary sm:text-3xl md:text-4xl lg:text-[40px]">
+          <h2 className="font-display text-2xl font-bold text-text-primary sm:text-3xl md:text-4xl lg:text-[38px] xl:text-[42px]">
             {faqHeadline}
           </h2>
         </div>
-        <div className="mt-10 sm:mt-12">
+        <div className="mt-10 sm:mt-12 lg:mt-10 xl:mt-12">
           <FAQAccordion />
         </div>
       </SectionShell>

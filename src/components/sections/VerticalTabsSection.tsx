@@ -481,16 +481,16 @@ export default function VerticalTabsSection() {
   return (
     <SectionWrapper id="verticais" background="white">
       <div className="text-center">
-        <h2 className="mx-auto max-w-4xl font-display text-2xl font-extrabold leading-[1.08] tracking-[-0.03em] text-text-primary sm:text-4xl md:text-5xl lg:text-[56px]">
+        <h2 className="mx-auto max-w-4xl font-display text-2xl font-extrabold leading-[1.08] tracking-[-0.03em] text-text-primary sm:text-4xl md:text-5xl lg:max-w-[58rem] lg:text-[48px] xl:text-[52px] 2xl:text-[56px]">
           {HEADLINE}
         </h2>
-        <p className="mx-auto mt-4 max-w-3xl font-body text-sm leading-relaxed text-text-secondary sm:mt-5 sm:text-[15px] md:text-lg">
+        <p className="mx-auto mt-4 max-w-3xl font-body text-sm leading-relaxed text-text-secondary sm:mt-5 sm:text-[15px] md:text-lg lg:max-w-[54rem] lg:text-[17px] lg:leading-[1.7]">
           {SUBTITLE}
         </p>
       </div>
 
       <div
-        className="hide-scrollbar mt-8 flex snap-x snap-mandatory gap-2 overflow-x-auto pb-1 pr-4 sm:mt-10 sm:pr-6 md:mt-12 md:justify-center md:snap-none md:gap-3 md:overflow-visible md:pr-0"
+        className="hide-scrollbar mt-8 flex snap-x snap-mandatory gap-2 overflow-x-auto pb-1 pr-4 sm:mt-10 sm:pr-6 md:mt-12 md:justify-center md:snap-none md:gap-3 md:overflow-visible md:pr-0 lg:mt-10 lg:gap-4 xl:gap-5"
         role="tablist"
         aria-label={"Verticais de atua\u00e7\u00e3o"}
       >
@@ -508,7 +508,7 @@ export default function VerticalTabsSection() {
               tabIndex={isActive ? 0 : -1}
               onClick={() => handleTabClick(index)}
               onKeyDown={(event) => handleTabKeyDown(event, index)}
-              className={`cursor-pointer flex min-h-[44px] shrink-0 snap-start items-center gap-2 rounded-lg px-3.5 py-2.5 font-display text-sm font-semibold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-accent sm:px-4 md:px-5 md:py-3 ${
+              className={`cursor-pointer flex min-h-[44px] shrink-0 snap-start items-center gap-2 rounded-lg px-3.5 py-2.5 font-display text-sm font-semibold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-accent sm:px-4 md:px-5 md:py-3 lg:px-6 lg:py-3.5 ${
                 isActive
                   ? "bg-navy text-white"
                   : "text-text-secondary hover:bg-bg-card"
@@ -525,7 +525,7 @@ export default function VerticalTabsSection() {
         Deslize para ver todas as verticais.
       </p>
 
-      <div className="mt-8 md:mt-10 md:min-h-[460px]">
+      <div className="mt-8 md:mt-10 lg:mt-8 lg:min-h-[420px] xl:min-h-[400px]">
         {VERTICALS.map((vertical, index) => {
           const isActive = activeTab === index;
           const Card = CARDS[index];
@@ -540,15 +540,15 @@ export default function VerticalTabsSection() {
             >
               {isActive && (
                 <div className="animate-tab-fade-in">
-                  <div className="flex flex-col gap-6 sm:gap-8 lg:flex-row lg:items-start lg:gap-12">
-                    <div className="space-y-6 lg:w-[60%]">
+                  <div className="flex flex-col gap-6 sm:gap-8 lg:flex-row lg:items-start lg:gap-10 xl:gap-12">
+                    <div className="space-y-6 lg:w-[56%] lg:space-y-5 xl:w-[58%]">
                       <StatCallout stat={vertical.stat} />
 
                       <div className="space-y-4">
                         {vertical.paragraphs.map((paragraph, paragraphIndex) => (
                           <p
                             key={paragraphIndex}
-                            className="font-body text-sm leading-relaxed text-text-secondary sm:text-base md:text-lg"
+                            className="font-body text-sm leading-relaxed text-text-secondary sm:text-base md:text-lg lg:text-[16px] lg:leading-[1.7] xl:text-lg"
                           >
                             {paragraph}
                           </p>
@@ -559,7 +559,7 @@ export default function VerticalTabsSection() {
                         <p className="mb-2 font-body text-sm font-semibold text-text-secondary">
                           Ideal para:
                         </p>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-2 lg:gap-2.5">
                           {vertical.idealFor.map((niche) => (
                             <span
                               key={niche}
@@ -586,7 +586,7 @@ export default function VerticalTabsSection() {
                       </div>
                     </div>
 
-                    <div className="lg:w-[40%]">
+                    <div className="lg:w-[44%] xl:w-[42%]">
                       <Card />
                     </div>
                   </div>

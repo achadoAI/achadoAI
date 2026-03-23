@@ -9,7 +9,7 @@ export function FAQAccordion() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <div className="mx-auto flex max-w-[720px] flex-col gap-3">
+    <div className="mx-auto flex max-w-[720px] flex-col gap-3 lg:max-w-[960px] xl:max-w-[1040px]">
       {faqItems.map((item, i) => (
         <div
           key={item.id}
@@ -22,11 +22,11 @@ export function FAQAccordion() {
               setOpenIndex(newIndex);
               if (newIndex >= 0) trackFaqOpen(item.id);
             }}
-            className="flex min-h-[44px] w-full items-center justify-between rounded-xl px-4 py-4 text-left cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-green-accent sm:px-6 sm:py-5"
+            className="flex min-h-[44px] w-full items-center justify-between rounded-xl px-4 py-4 text-left cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-green-accent sm:px-6 sm:py-5 lg:px-7 lg:py-4"
             aria-expanded={openIndex === i}
             aria-controls={`faq-answer-${item.id}`}
           >
-            <span className="pr-3 font-display text-sm font-semibold text-text-primary sm:pr-4 sm:text-base md:text-lg">
+            <span className="pr-3 font-display text-sm font-semibold text-text-primary sm:pr-4 sm:text-base md:text-lg lg:text-[17px]">
               {item.question}
             </span>
             <ChevronDown
@@ -46,8 +46,8 @@ export function FAQAccordion() {
             aria-labelledby={`faq-question-${item.id}`}
           >
             <div className="overflow-hidden">
-              <div className="px-4 pb-5 sm:px-6 sm:pb-6">
-                <p className="font-body text-sm leading-relaxed text-text-secondary sm:text-base">
+              <div className="px-4 pb-5 sm:px-6 sm:pb-6 lg:px-7 lg:pb-5">
+                <p className="font-body text-sm leading-relaxed text-text-secondary sm:text-base lg:leading-[1.7]">
                   {item.answer}
                 </p>
               </div>

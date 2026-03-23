@@ -93,10 +93,10 @@ export function QuickScanPreview() {
   return (
     <div
       ref={ref as React.RefObject<HTMLDivElement>}
-      className="w-full max-w-full overflow-hidden rounded-xl border border-white/10 bg-white shadow-2xl shadow-black/20 sm:max-w-[480px]"
+      className="w-full max-w-full overflow-hidden rounded-xl border border-white/10 bg-white shadow-2xl shadow-black/20 sm:max-w-[480px] lg:max-w-[540px] xl:max-w-[560px]"
     >
       {/* Header */}
-      <div className="bg-navy px-4 py-3 sm:px-5 sm:py-4">
+      <div className="bg-navy px-4 py-3 sm:px-5 sm:py-4 lg:px-6 lg:py-5">
         <div className="flex items-center gap-2">
           <div className="flex gap-1.5">
             <div className="h-2.5 w-2.5 rounded-full bg-red-soft/70" />
@@ -109,9 +109,9 @@ export function QuickScanPreview() {
       </div>
 
       {/* Grid */}
-      <div className="p-4 sm:p-5">
+      <div className="p-4 sm:p-5 lg:p-6">
         {/* Platform headers */}
-        <div className="mb-3 grid grid-cols-[minmax(0,1fr)_repeat(3,48px)] items-center gap-1.5 sm:grid-cols-[1fr_repeat(3,56px)] sm:gap-2">
+        <div className="mb-3 grid grid-cols-[minmax(0,1fr)_repeat(3,48px)] items-center gap-1.5 sm:grid-cols-[1fr_repeat(3,56px)] sm:gap-2 lg:grid-cols-[1fr_repeat(3,64px)]">
           <div />
           {platforms.map((platform) => (
             <div
@@ -127,7 +127,7 @@ export function QuickScanPreview() {
         {keywords.map((keyword, rowIdx) => (
           <div
             key={keyword}
-            className="grid grid-cols-[minmax(0,1fr)_repeat(3,48px)] items-center gap-1.5 border-t border-border-light py-3 sm:grid-cols-[1fr_repeat(3,56px)] sm:gap-2"
+            className="grid grid-cols-[minmax(0,1fr)_repeat(3,48px)] items-center gap-1.5 border-t border-border-light py-3 sm:grid-cols-[1fr_repeat(3,56px)] sm:gap-2 lg:grid-cols-[1fr_repeat(3,64px)] lg:py-3.5"
           >
             <span className="min-w-0 truncate pr-2 font-body text-xs text-text-secondary">
               {keyword}
@@ -148,7 +148,7 @@ export function QuickScanPreview() {
       </div>
 
       {/* Footer */}
-      <div className="border-t border-border-light px-4 py-4 sm:px-5">
+      <div className="border-t border-border-light px-4 py-4 sm:px-5 lg:px-6">
         <div className="mb-2 flex items-center justify-between">
           <span className="font-body text-xs text-text-secondary">
             AI Visibility Score

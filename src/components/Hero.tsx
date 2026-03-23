@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden bg-navy pb-14 pt-24 scroll-mt-20 sm:pb-16 sm:pt-28 md:pb-32 md:pt-40"
+      className="relative overflow-hidden bg-navy pb-14 pt-24 scroll-mt-20 sm:pb-16 sm:pt-28 md:pb-32 md:pt-40 lg:pb-24 lg:pt-32 xl:pb-28 xl:pt-36"
     >
       {/* ── Background atmosphere ── */}
       <div className="hero-grid-pattern pointer-events-none absolute inset-0" aria-hidden="true" />
@@ -16,18 +16,19 @@ export function Hero() {
       <div className="hero-scan-line pointer-events-none absolute inset-0" aria-hidden="true" />
       <div className="noise-overlay pointer-events-none absolute inset-0" aria-hidden="true" />
 
-      <div className="relative z-10 mx-auto flex max-w-[1200px] flex-col items-center gap-8 px-4 sm:gap-10 sm:px-6 md:px-8 lg:flex-row lg:items-center lg:gap-16 lg:px-0">
+      <div className="relative z-10 mx-auto flex w-full max-w-[1200px] flex-col items-center gap-8 px-4 sm:gap-10 sm:px-6 md:px-8 lg:max-w-[1280px] lg:flex-row lg:items-center lg:gap-12 lg:px-0 xl:max-w-[1440px] xl:gap-14">
         {/* ── Left: Copy ── */}
-        <div className="flex flex-1 flex-col items-center text-center lg:items-start lg:text-left">
-          {/* Live badge */}
-          <div className="animate-fade-in mb-5 inline-flex items-center gap-2 rounded-full border border-green-accent/20 bg-green-accent/[0.06] px-3.5 py-1.5 backdrop-blur-sm sm:mb-6 sm:gap-2.5 sm:px-4">
-            <span className="hero-live-dot relative h-2 w-2 rounded-full bg-green-accent" />
-            <span className="font-mono text-[11px] font-medium tracking-widest text-green-accent/80 uppercase">
-              {heroContent.badge}
-            </span>
-          </div>
+        <div className="flex flex-1 flex-col items-center text-center lg:max-w-[36rem] lg:items-start lg:text-left xl:max-w-[40rem]">
+          {heroContent.badge ? (
+            <div className="animate-fade-in mb-5 inline-flex items-center gap-2 rounded-full border border-green-accent/20 bg-green-accent/[0.06] px-3.5 py-1.5 backdrop-blur-sm sm:mb-6 sm:gap-2.5 sm:px-4">
+              <span className="hero-live-dot relative h-2 w-2 rounded-full bg-green-accent" />
+              <span className="font-mono text-[11px] font-medium tracking-widest text-green-accent/80 uppercase">
+                {heroContent.badge}
+              </span>
+            </div>
+          ) : null}
 
-          <h1 className="animate-fade-in-up max-w-[12ch] font-display text-[2rem] font-extrabold leading-[1.05] tracking-tight text-white sm:max-w-none sm:text-[2.5rem] md:text-5xl lg:text-[64px]">
+          <h1 className="animate-fade-in-up max-w-[12ch] font-display text-[2rem] font-extrabold leading-[1.05] tracking-tight text-white sm:max-w-none sm:text-[2.5rem] md:text-5xl lg:text-[56px] xl:text-[60px] 2xl:text-[64px]">
             {heroContent.headlinePrefix}{" "}
             <span className="hero-text-glow text-gradient-green">
               {heroContent.headlineHighlight}
@@ -35,14 +36,14 @@ export function Hero() {
           </h1>
 
           <p
-            className="animate-fade-in-up mt-5 max-w-xl font-body text-base leading-relaxed text-[#94a3b8] sm:mt-6 sm:text-lg md:mt-8 md:text-xl"
+            className="animate-fade-in-up mt-5 max-w-xl font-body text-base leading-relaxed text-[#94a3b8] sm:mt-6 sm:text-lg md:mt-8 md:text-xl lg:mt-6 lg:max-w-[35rem] lg:text-[18px] lg:leading-[1.7] xl:text-xl"
             style={{ animationDelay: "120ms" }}
           >
             {heroContent.subtitle}
           </p>
 
           <div
-            className="animate-fade-in-up mt-7 flex w-full flex-col items-stretch gap-3 sm:mt-8 sm:flex-row sm:items-center sm:gap-4 md:mt-10"
+            className="animate-fade-in-up mt-7 flex w-full flex-col items-stretch gap-3 sm:mt-8 sm:flex-row sm:items-center sm:gap-4 md:mt-10 lg:mt-8 lg:gap-3"
             style={{ animationDelay: "240ms" }}
           >
             <CTAButton
@@ -66,17 +67,21 @@ export function Hero() {
           </div>
 
           <p
-            className="animate-fade-in-up mt-4 text-center font-body text-sm text-[#64748b] lg:text-left"
+            className="animate-fade-in-up mt-4 text-center font-body text-sm text-[#64748b] lg:mt-3 lg:text-left"
             style={{ animationDelay: "360ms" }}
           >
             {heroContent.microcopy}
           </p>
 
-          <PlatformLogoStrip label={heroContent.logoStripLabel} className="mt-8 sm:mt-10" variant="dark" />
+          <PlatformLogoStrip
+            label={heroContent.logoStripLabel}
+            className="mt-8 sm:mt-10 lg:mt-8 xl:mt-9"
+            variant="dark"
+          />
         </div>
 
         {/* ── Right: Scan card with radar effects ── */}
-        <div className="relative flex w-full flex-1 justify-center lg:justify-end">
+        <div className="relative flex w-full flex-1 justify-center lg:flex-[1.05] lg:justify-end">
           <div className="relative">
             {/* Radar rings — desktop only */}
             <div

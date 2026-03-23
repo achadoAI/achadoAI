@@ -8,7 +8,7 @@ function delayStyle(delay: number) {
 
 function InlineCTA() {
   return (
-    <div className="mt-10 text-center xl:text-left">
+    <div className="mt-8 text-center lg:mt-6 lg:text-left">
       <a
         href={CALENDLY_URL}
         data-track-event="cta_click"
@@ -40,11 +40,12 @@ function InlineCTA() {
 }
 
 const cardBase =
-  "group/card rounded-xl border border-white/[0.08] bg-navy p-5 transition-all duration-300 hover:border-white/[0.14] hover:shadow-[0_4px_32px_rgba(34,197,94,0.06)] sm:p-6";
+  "group/card rounded-xl border border-white/[0.08] bg-navy p-5 transition-all duration-300 hover:border-white/[0.14] hover:shadow-[0_4px_32px_rgba(34,197,94,0.06)] sm:p-6 lg:p-5 xl:p-6";
 const labelDot = "mb-3 flex items-center gap-2";
 const labelText =
   "font-mono text-[11px] font-semibold uppercase tracking-widest text-white/40";
-const bodyText = "font-body text-sm leading-[1.75] text-white/70 sm:text-[15px]";
+const bodyText =
+  "font-body text-sm leading-[1.75] text-white/70 sm:text-[15px] lg:text-[14px] lg:leading-[1.65] xl:text-[15px] xl:leading-[1.75]";
 const boldText = "font-semibold text-white";
 
 export function WhatIsGeoSection() {
@@ -52,7 +53,7 @@ export function WhatIsGeoSection() {
     <section
       id="what-is-geo"
       aria-labelledby="what-is-geo-heading"
-      className="relative scroll-mt-20 overflow-hidden bg-bg-alt py-12 sm:py-14 md:py-24"
+      className="relative scroll-mt-20 overflow-hidden bg-bg-alt py-12 sm:py-14 md:py-24 lg:py-20 xl:py-24"
     >
       {/* Atmospheric background glows */}
       <div
@@ -72,18 +73,18 @@ export function WhatIsGeoSection() {
         aria-hidden="true"
       />
 
-      <div className="relative mx-auto max-w-[1200px] px-4 sm:px-6 md:px-8">
+      <div className="relative mx-auto w-full max-w-[1200px] px-4 sm:px-6 md:px-8 lg:max-w-[1280px] lg:px-0 2xl:max-w-[1440px]">
         {/* Section heading with GEO highlighted */}
         <h2
           id="what-is-geo-heading"
-          className="animate-fade-in-up max-w-[13ch] font-display text-2xl font-bold leading-[1.1] tracking-[-0.02em] text-text-primary sm:max-w-none sm:text-[30px] md:text-[40px]"
+          className="animate-fade-in-up max-w-[13ch] font-display text-2xl font-bold leading-[1.1] tracking-[-0.02em] text-text-primary sm:max-w-none sm:text-[30px] md:text-[40px] lg:text-[38px] xl:text-[42px]"
         >
           O que é{" "}
           <span className="text-gradient-green">GEO</span> e por que sua
           marca precisa disso agora
         </h2>
 
-        <div className="mt-8 flex flex-col gap-6 sm:mt-10 sm:gap-8 xl:grid xl:grid-cols-[5fr_7fr] xl:items-start xl:gap-14">
+        <div className="mt-8 flex flex-col gap-6 sm:mt-10 sm:gap-8 lg:grid lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:items-start lg:gap-10 xl:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] xl:gap-12">
           {/* Left: Text cards with dark identity */}
           <div className="flex flex-col gap-3 sm:gap-4">
             {/* Card 1: GEO Definition */}
@@ -128,7 +129,7 @@ export function WhatIsGeoSection() {
 
             {/* Card 3: Quote — visually distinct */}
             <div
-              className="animate-fade-in-up group/card relative overflow-hidden rounded-xl border border-green-accent/20 bg-[#1a2240] p-5 transition-all duration-300 hover:border-green-accent/30 hover:shadow-[0_4px_40px_rgba(34,197,94,0.08)] sm:p-6"
+              className="animate-fade-in-up group/card relative overflow-hidden rounded-xl border border-green-accent/20 bg-[#1a2240] p-5 transition-all duration-300 hover:border-green-accent/30 hover:shadow-[0_4px_40px_rgba(34,197,94,0.08)] sm:p-6 lg:p-5 xl:p-6"
               style={delayStyle(240)}
             >
               {/* Large decorative quote mark */}
@@ -139,7 +140,7 @@ export function WhatIsGeoSection() {
                 &ldquo;
               </span>
               <div className="relative border-l-2 border-green-accent/60 pl-5">
-                <p className="font-display text-base font-semibold leading-[1.6] text-white sm:text-[17px]">
+                <p className="font-display text-base font-semibold leading-[1.6] text-white sm:text-[17px] lg:text-[16px] lg:leading-[1.55] xl:text-[17px] xl:leading-[1.6]">
                   &ldquo;SEO forte é a fundação. GEO é a camada inteligente que
                   transforma essa fundação em presença real dentro das respostas
                   de IA.&rdquo;
@@ -175,7 +176,7 @@ export function WhatIsGeoSection() {
           {/* Right: Comparison Table */}
           <div>
             <p
-              className="animate-fade-in-up mb-5 font-display text-sm font-semibold text-text-primary sm:mb-6 sm:text-base md:text-lg"
+              className="animate-fade-in-up mb-5 font-display text-sm font-semibold text-text-primary sm:mb-6 sm:text-base md:text-lg lg:mb-5"
               style={delayStyle(400)}
             >
               {solutionContent.tableIntro}

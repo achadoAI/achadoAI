@@ -1,7 +1,7 @@
 import { CALENDLY_URL, CONTACT_EMAIL_URL } from "@/lib/constants";
 
 export const heroContent = {
-  badge: "AI Visibility Platform",
+  badge: "",
   headlinePrefix: "Sua marca,",
   headlineHighlight: "citada e recomendada por IAs.",
   subtitle:
