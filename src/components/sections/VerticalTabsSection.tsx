@@ -237,7 +237,7 @@ const VERTICALS: VerticalData[] = [
 
 function CardChrome({ label }: { label: string }) {
   return (
-    <div className="mb-4 flex items-center gap-2">
+    <div className="mb-3 flex items-center gap-2 sm:mb-4">
       <div className="flex gap-1">
         <span className="block h-2 w-2 rounded-full bg-white/20" />
         <span className="block h-2 w-2 rounded-full bg-white/20" />
@@ -250,7 +250,7 @@ function CardChrome({ label }: { label: string }) {
 
 function QueryBubble({ text }: { text: string }) {
   return (
-    <div className="mb-4 rounded-lg bg-white/10 px-3 py-2">
+    <div className="mb-3 rounded-lg bg-white/10 px-3 py-2 sm:mb-4">
       <p className="text-[11px] leading-snug text-white/70">{text}</p>
     </div>
   );
@@ -292,7 +292,7 @@ function ResultItem({
 
 function SaudeCard() {
   return (
-    <div className="max-h-[280px] overflow-hidden rounded-xl bg-navy p-5">
+    <div className="max-h-[260px] overflow-hidden rounded-xl bg-navy p-4 sm:max-h-[280px] sm:p-5">
       <CardChrome label="AI Assistant" />
       <QueryBubble text="Cl\u00ednicas de dermatologia em Campinas" />
       <div className="space-y-0.5">
@@ -319,7 +319,7 @@ function SaudeCard() {
 
 function EcommerceCard() {
   return (
-    <div className="max-h-[280px] overflow-hidden rounded-xl bg-navy p-5">
+    <div className="max-h-[260px] overflow-hidden rounded-xl bg-navy p-4 sm:max-h-[280px] sm:p-5">
       <CardChrome label="AI Assistant" />
       <QueryBubble text="Melhor hidratante para pele seca" />
       <div className="space-y-0.5">
@@ -346,7 +346,7 @@ function EcommerceCard() {
 
 function SaasCard() {
   return (
-    <div className="max-h-[280px] overflow-hidden rounded-xl bg-navy p-5">
+    <div className="max-h-[260px] overflow-hidden rounded-xl bg-navy p-4 sm:max-h-[280px] sm:p-5">
       <CardChrome label="AI Assistant" />
       <QueryBubble text="Melhor CRM para pequenas empresas" />
       <div className="space-y-0.5">
@@ -373,7 +373,7 @@ function SaasCard() {
 
 function LocalCard() {
   return (
-    <div className="max-h-[280px] overflow-hidden rounded-xl bg-navy p-5">
+    <div className="max-h-[260px] overflow-hidden rounded-xl bg-navy p-4 sm:max-h-[280px] sm:p-5">
       <CardChrome label="AI Assistant" />
       <QueryBubble text="Melhor academia perto de mim" />
       <div className="space-y-0.5">
@@ -407,10 +407,10 @@ const CARDS: React.ComponentType[] = [
 
 function StatCallout({ stat }: { stat: VerticalStat }) {
   return (
-    <div className="rounded-lg border-l-[3px] border-green-accent bg-bg-card px-5 py-4">
+    <div className="rounded-lg border-l-[3px] border-green-accent bg-bg-card px-4 py-4 sm:px-5">
       {stat.isNumeric && stat.value ? (
         <>
-          <p className="font-mono text-[32px] font-bold leading-tight text-green-accent md:text-[40px]">
+          <p className="font-mono text-[28px] font-bold leading-tight text-green-accent sm:text-[32px] md:text-[40px]">
             {stat.value}
           </p>
           <p className="mt-1 font-body text-sm text-text-secondary md:text-[15px]">
@@ -481,16 +481,16 @@ export default function VerticalTabsSection() {
   return (
     <SectionWrapper id="verticais" background="white">
       <div className="text-center">
-        <h2 className="mx-auto max-w-4xl font-display text-[34px] font-extrabold leading-[1.04] tracking-[-0.03em] text-text-primary md:text-5xl lg:text-[56px]">
+        <h2 className="mx-auto max-w-4xl font-display text-2xl font-extrabold leading-[1.08] tracking-[-0.03em] text-text-primary sm:text-4xl md:text-5xl lg:text-[56px]">
           {HEADLINE}
         </h2>
-        <p className="mx-auto mt-5 max-w-3xl font-body text-[15px] leading-relaxed text-text-secondary md:text-lg">
+        <p className="mx-auto mt-4 max-w-3xl font-body text-sm leading-relaxed text-text-secondary sm:mt-5 sm:text-[15px] md:text-lg">
           {SUBTITLE}
         </p>
       </div>
 
       <div
-        className="hide-scrollbar mt-10 flex snap-x snap-mandatory gap-2 overflow-x-auto pb-1 pr-6 md:mt-12 md:justify-center md:snap-none md:gap-3 md:overflow-visible md:pr-0"
+        className="hide-scrollbar mt-8 flex snap-x snap-mandatory gap-2 overflow-x-auto pb-1 pr-4 sm:mt-10 sm:pr-6 md:mt-12 md:justify-center md:snap-none md:gap-3 md:overflow-visible md:pr-0"
         role="tablist"
         aria-label={"Verticais de atua\u00e7\u00e3o"}
       >
@@ -508,7 +508,7 @@ export default function VerticalTabsSection() {
               tabIndex={isActive ? 0 : -1}
               onClick={() => handleTabClick(index)}
               onKeyDown={(event) => handleTabKeyDown(event, index)}
-              className={`cursor-pointer flex min-h-[44px] shrink-0 snap-start items-center gap-2 rounded-lg px-4 py-2.5 font-display text-sm font-semibold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-accent md:px-5 md:py-3 ${
+              className={`cursor-pointer flex min-h-[44px] shrink-0 snap-start items-center gap-2 rounded-lg px-3.5 py-2.5 font-display text-sm font-semibold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-accent sm:px-4 md:px-5 md:py-3 ${
                 isActive
                   ? "bg-navy text-white"
                   : "text-text-secondary hover:bg-bg-card"
@@ -525,7 +525,7 @@ export default function VerticalTabsSection() {
         Deslize para ver todas as verticais.
       </p>
 
-      <div className="mt-8 md:mt-10" style={{ minHeight: 460 }}>
+      <div className="mt-8 md:mt-10 md:min-h-[460px]">
         {VERTICALS.map((vertical, index) => {
           const isActive = activeTab === index;
           const Card = CARDS[index];
@@ -540,7 +540,7 @@ export default function VerticalTabsSection() {
             >
               {isActive && (
                 <div className="animate-tab-fade-in">
-                  <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-12">
+                  <div className="flex flex-col gap-6 sm:gap-8 lg:flex-row lg:items-start lg:gap-12">
                     <div className="space-y-6 lg:w-[60%]">
                       <StatCallout stat={vertical.stat} />
 
@@ -548,7 +548,7 @@ export default function VerticalTabsSection() {
                         {vertical.paragraphs.map((paragraph, paragraphIndex) => (
                           <p
                             key={paragraphIndex}
-                            className="font-body text-base leading-relaxed text-text-secondary md:text-lg"
+                            className="font-body text-sm leading-relaxed text-text-secondary sm:text-base md:text-lg"
                           >
                             {paragraph}
                           </p>
@@ -578,7 +578,7 @@ export default function VerticalTabsSection() {
                           data-track-section="verticals"
                           data-track-type="vertical_cta"
                           data-track-extra={JSON.stringify({ vertical: vertical.id })}
-                          className="inline-flex min-h-[44px] cursor-pointer items-center justify-center rounded-lg border-2 border-green-accent px-6 py-3 font-body text-base font-semibold text-green-accent transition-colors duration-200 hover:bg-green-accent hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-accent focus-visible:ring-offset-2"
+                          className="inline-flex min-h-[44px] w-full cursor-pointer items-center justify-center rounded-lg border-2 border-green-accent px-6 py-3 font-body text-base font-semibold text-green-accent transition-colors duration-200 hover:bg-green-accent hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-accent focus-visible:ring-offset-2 sm:w-auto"
                           aria-label={vertical.cta}
                         >
                           {vertical.cta}
@@ -586,7 +586,7 @@ export default function VerticalTabsSection() {
                       </div>
                     </div>
 
-                    <div className="order-first lg:order-none lg:w-[40%]">
+                    <div className="lg:w-[40%]">
                       <Card />
                     </div>
                   </div>

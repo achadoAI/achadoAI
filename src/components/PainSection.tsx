@@ -16,11 +16,11 @@ const iconMap = {
 export function PainSection() {
   return (
     <SectionShell id="problema" background="white">
-      <h2 className="font-display text-3xl font-bold text-text-primary md:text-4xl lg:text-[40px]">
+      <h2 className="font-display text-2xl font-bold text-text-primary sm:text-3xl md:text-4xl lg:text-[40px]">
         {painContent.headline}
       </h2>
 
-      <div className="my-10 grid grid-cols-1 gap-6 md:my-12 md:grid-cols-3 md:gap-8">
+      <div className="my-8 grid grid-cols-1 gap-4 sm:my-10 sm:gap-5 md:my-12 md:grid-cols-3 md:gap-8">
         {painContent.blocks.map((block) => {
           const Icon = iconMap[block.icon];
 
@@ -29,16 +29,16 @@ export function PainSection() {
               <div className="flex items-center gap-3 md:block">
                 <Icon
                   aria-hidden="true"
-                  size={24}
+                  size={22}
                   strokeWidth={1.75}
                   className="shrink-0 text-text-secondary"
                 />
-                <h3 className="font-display text-lg font-semibold text-text-primary md:mt-3 md:mb-2 md:text-xl">
+                <h3 className="font-display text-base font-semibold text-text-primary sm:text-lg md:mt-3 md:mb-2 md:text-xl">
                   {block.title}
                 </h3>
               </div>
 
-              <p className="mt-2 max-w-[32ch] font-body text-base leading-relaxed text-text-secondary">
+              <p className="mt-2 max-w-full font-body text-sm leading-relaxed text-text-secondary sm:max-w-[32ch] sm:text-base">
                 {block.description}
               </p>
             </div>
@@ -46,13 +46,13 @@ export function PainSection() {
         })}
       </div>
 
-      <p className="mb-8 font-display text-lg font-semibold text-text-primary">
+      <p className="mb-6 font-display text-base font-semibold text-text-primary sm:mb-8 sm:text-lg">
         {painContent.transition}
       </p>
 
       <BeforeAfterChat />
 
-      <p className="mt-10 max-w-3xl font-body text-base leading-relaxed text-text-primary md:text-lg">
+      <p className="mt-8 max-w-3xl font-body text-sm leading-relaxed text-text-primary sm:text-base md:mt-10 md:text-lg">
         {painContent.conclusion}
       </p>
 
@@ -60,6 +60,7 @@ export function PainSection() {
         <CTAButton
           href={CALENDLY_URL}
           variant="tertiary"
+          className="w-full sm:w-auto"
           ariaLabel="Quero saber como minha marca aparece hoje"
           tracking={{ section: "pain", type: "diagnostico" }}
         >

@@ -213,17 +213,17 @@ export default function PricingSection() {
         <div className="mx-auto max-w-[760px] text-center">
           <h2
             id="pricing-heading"
-            className="font-display text-[28px] font-bold leading-[1.2] text-text-primary md:text-[34px] lg:text-[40px]"
+            className="font-display text-2xl font-bold leading-[1.15] text-text-primary sm:text-[30px] md:text-[34px] lg:text-[40px]"
           >
             {pricingHeadline}
           </h2>
-          <p className="mt-4 font-body text-[15px] leading-[1.6] text-text-secondary md:text-[16px]">
+          <p className="mt-3 font-body text-sm leading-[1.6] text-text-secondary sm:mt-4 sm:text-[15px] md:text-[16px]">
             {pricingSubtitle}
           </p>
         </div>
 
         <div
-          className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          className="mt-10 grid grid-cols-1 gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3"
           aria-labelledby="pricing-heading"
         >
           {plans.map((plan, index) => {
@@ -235,7 +235,7 @@ export default function PricingSection() {
             return (
               <article
                 key={plan.id}
-                className={`${plan.orderClassName} flex h-full flex-col rounded-2xl bg-white px-7 py-8 shadow-[0_1px_3px_rgba(0,0,0,0.06)] transition-[box-shadow,border-color] duration-200 hover:shadow-[0_4px_12px_rgba(0,0,0,0.1)] ${
+                className={`${plan.orderClassName} flex h-full flex-col rounded-2xl bg-white px-5 py-6 shadow-[0_1px_3px_rgba(0,0,0,0.06)] transition-[box-shadow,border-color] duration-200 hover:shadow-[0_4px_12px_rgba(0,0,0,0.1)] sm:px-6 sm:py-8 lg:px-7 ${
                   isHighlighted
                     ? "relative border-2 border-green-accent lg:-mt-2"
                     : "border border-border-light"
@@ -252,7 +252,7 @@ export default function PricingSection() {
                   </div>
                 ) : null}
 
-                <div className="rounded-2xl bg-bg-alt px-4 py-3">
+                <div className="rounded-2xl bg-bg-alt px-3.5 py-3 sm:px-4">
                   <p className="font-body text-[14px] leading-[1.5] text-text-secondary">
                     {plan.tag}
                   </p>
@@ -261,7 +261,7 @@ export default function PricingSection() {
                 <div className="mt-6">
                   <h3
                     id={`${plan.id}-title`}
-                    className="font-display text-[20px] font-bold leading-[1.2] text-text-primary lg:text-[24px]"
+                    className="font-display text-[18px] font-bold leading-[1.2] text-text-primary sm:text-[20px] lg:text-[24px]"
                   >
                     {plan.name}
                   </h3>
@@ -270,7 +270,7 @@ export default function PricingSection() {
                     {plan.priceLines.map((priceLine) => (
                       <p
                         key={priceLine}
-                        className="font-mono text-[28px] font-bold leading-[1.15] text-text-primary lg:text-[36px]"
+                        className="font-mono text-[24px] font-bold leading-[1.15] text-text-primary sm:text-[28px] lg:text-[36px]"
                       >
                         {priceLine}
                       </p>
@@ -300,7 +300,7 @@ export default function PricingSection() {
                     {plan.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3">
                         <CheckIcon />
-                        <span className="font-body text-[15px] leading-[1.6] text-text-primary">
+                        <span className="font-body text-[14px] leading-[1.6] text-text-primary sm:text-[15px]">
                           {feature}
                         </span>
                       </li>
@@ -350,7 +350,7 @@ export default function PricingSection() {
         </div>
 
         <div className="mx-auto mt-10 max-w-[980px] text-center">
-          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-text-secondary">
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2.5 text-text-secondary sm:gap-x-5 sm:gap-y-3">
             {pricingFooterItems.map((item, index) => {
               const Icon = footerIcons[index];
 

@@ -93,10 +93,10 @@ export function QuickScanPreview() {
   return (
     <div
       ref={ref as React.RefObject<HTMLDivElement>}
-      className="w-full max-w-[480px] overflow-hidden rounded-xl border border-white/10 bg-white shadow-2xl shadow-black/20"
+      className="w-full max-w-full overflow-hidden rounded-xl border border-white/10 bg-white shadow-2xl shadow-black/20 sm:max-w-[480px]"
     >
       {/* Header */}
-      <div className="bg-navy px-5 py-4">
+      <div className="bg-navy px-4 py-3 sm:px-5 sm:py-4">
         <div className="flex items-center gap-2">
           <div className="flex gap-1.5">
             <div className="h-2.5 w-2.5 rounded-full bg-red-soft/70" />
@@ -109,14 +109,14 @@ export function QuickScanPreview() {
       </div>
 
       {/* Grid */}
-      <div className="p-5">
+      <div className="p-4 sm:p-5">
         {/* Platform headers */}
-        <div className="mb-3 grid grid-cols-[1fr_repeat(3,56px)] items-center gap-2">
+        <div className="mb-3 grid grid-cols-[minmax(0,1fr)_repeat(3,48px)] items-center gap-1.5 sm:grid-cols-[1fr_repeat(3,56px)] sm:gap-2">
           <div />
           {platforms.map((platform) => (
             <div
               key={platform}
-              className="text-center font-mono text-[10px] font-medium text-text-placeholder uppercase tracking-wider"
+              className="text-center font-mono text-[9px] font-medium text-text-placeholder uppercase tracking-wide sm:text-[10px] sm:tracking-wider"
             >
               {platform.replace("Google AIO", "G.AIO")}
             </div>
@@ -127,9 +127,9 @@ export function QuickScanPreview() {
         {keywords.map((keyword, rowIdx) => (
           <div
             key={keyword}
-            className="grid grid-cols-[1fr_repeat(3,56px)] items-center gap-2 border-t border-border-light py-3"
+            className="grid grid-cols-[minmax(0,1fr)_repeat(3,48px)] items-center gap-1.5 border-t border-border-light py-3 sm:grid-cols-[1fr_repeat(3,56px)] sm:gap-2"
           >
-            <span className="font-body text-xs text-text-secondary truncate pr-2">
+            <span className="min-w-0 truncate pr-2 font-body text-xs text-text-secondary">
               {keyword}
             </span>
             {results[rowIdx].map((status, colIdx) => {
@@ -148,8 +148,8 @@ export function QuickScanPreview() {
       </div>
 
       {/* Footer */}
-      <div className="border-t border-border-light px-5 py-4">
-        <div className="flex items-center justify-between mb-2">
+      <div className="border-t border-border-light px-4 py-4 sm:px-5">
+        <div className="mb-2 flex items-center justify-between">
           <span className="font-body text-xs text-text-secondary">
             AI Visibility Score
           </span>

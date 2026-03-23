@@ -105,30 +105,30 @@ export function ComparisonTable() {
       </div>
 
       {/* Mobile cards */}
-      <div className="flex flex-col gap-4 md:hidden">
+      <div className="flex flex-col gap-3 sm:gap-4 md:hidden">
         {comparisonData.map((row, index) => (
           <div
             key={row.capability}
             className="animate-stagger-row overflow-hidden rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.06)]"
             style={{ animationDelay: `${index * 100}ms` }}
           >
-            <div className="rounded-t-xl border border-b-0 border-border-light bg-white px-4 py-3">
+            <div className="rounded-t-xl border border-b-0 border-border-light bg-white px-3.5 py-3 sm:px-4">
               <span className="font-display text-sm font-bold text-text-primary">
                 {row.capability}
               </span>
             </div>
 
-            <div className="border-x border-border-light bg-bg-alt px-4 py-3">
+            <div className="border-x border-border-light bg-bg-alt px-3.5 py-3 sm:px-4">
               <span className="font-body text-xs font-medium uppercase tracking-wide text-text-placeholder">
                 Agência de SEO
               </span>
-              <p className="mt-1 font-body text-sm text-text-secondary">
+              <p className="mt-1 font-body text-sm leading-relaxed text-text-secondary">
                 {row.seo}
               </p>
             </div>
 
             <div
-              className={`relative rounded-b-xl bg-navy px-4 py-3 ${
+              className={`relative rounded-b-xl bg-navy px-3.5 py-3 sm:px-4 ${
                 index === 0 ? "animate-navy-pulse" : ""
               }`}
             >

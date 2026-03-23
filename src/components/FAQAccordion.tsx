@@ -9,7 +9,7 @@ export function FAQAccordion() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <div className="mx-auto max-w-[720px] flex flex-col gap-3">
+    <div className="mx-auto flex max-w-[720px] flex-col gap-3">
       {faqItems.map((item, i) => (
         <div
           key={item.id}
@@ -22,11 +22,11 @@ export function FAQAccordion() {
               setOpenIndex(newIndex);
               if (newIndex >= 0) trackFaqOpen(item.id);
             }}
-            className="flex w-full items-center justify-between px-6 py-5 text-left cursor-pointer min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-green-accent rounded-xl"
+            className="flex min-h-[44px] w-full items-center justify-between rounded-xl px-4 py-4 text-left cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-green-accent sm:px-6 sm:py-5"
             aria-expanded={openIndex === i}
             aria-controls={`faq-answer-${item.id}`}
           >
-            <span className="font-display text-base font-semibold text-text-primary pr-4 md:text-lg">
+            <span className="pr-3 font-display text-sm font-semibold text-text-primary sm:pr-4 sm:text-base md:text-lg">
               {item.question}
             </span>
             <ChevronDown
@@ -46,8 +46,8 @@ export function FAQAccordion() {
             aria-labelledby={`faq-question-${item.id}`}
           >
             <div className="overflow-hidden">
-              <div className="px-6 pb-6">
-                <p className="font-body text-base leading-relaxed text-text-secondary">
+              <div className="px-4 pb-5 sm:px-6 sm:pb-6">
+                <p className="font-body text-sm leading-relaxed text-text-secondary sm:text-base">
                   {item.answer}
                 </p>
               </div>

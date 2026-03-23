@@ -27,7 +27,7 @@ export default function HomePage() {
         }}
       />
       <Navbar />
-      <main>
+      <main className="overflow-x-hidden">
         <Hero />
         <StatsStrip />
         <PainSection />

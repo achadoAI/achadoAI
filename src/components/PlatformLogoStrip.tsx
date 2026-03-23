@@ -60,19 +60,19 @@ const platforms = [
 export function PlatformLogoStrip({ label, className = "", variant = "light" }: PlatformLogoStripProps) {
   const isDark = variant === "dark";
   return (
-    <div className={`flex flex-col items-center gap-4 lg:items-start ${className}`}>
+    <div className={`flex flex-col items-center gap-3 sm:gap-4 lg:items-start ${className}`}>
       {label && (
-        <p className={`text-sm font-body ${isDark ? "text-[#64748b]" : "text-text-placeholder"}`}>
+        <p className={`text-xs font-body sm:text-sm ${isDark ? "text-[#64748b]" : "text-text-placeholder"}`}>
           {label}
         </p>
       )}
       <span className="sr-only">Google AI Overviews, ChatGPT e Perplexity.</span>
 
-      <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 lg:justify-start">
+      <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-10 lg:justify-start">
         {platforms.map((platform) => (
-          <div key={platform.id} className="flex items-center gap-2">
+          <div key={platform.id} className="flex items-center gap-1.5 sm:gap-2">
             <span className={isDark ? "text-[#94a3b8]" : platform.iconClassName}>{platform.icon}</span>
-            <span className={`text-sm font-body font-medium ${isDark ? "text-[#94a3b8]" : "text-text-secondary"}`}>
+            <span className={`text-xs font-body font-medium sm:text-sm ${isDark ? "text-[#94a3b8]" : "text-text-secondary"}`}>
               {platform.name}
             </span>
           </div>

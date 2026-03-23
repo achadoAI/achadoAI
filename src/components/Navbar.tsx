@@ -58,10 +58,10 @@ export function Navbar() {
       }`}
       aria-label="Navegacao principal"
     >
-      <div className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-4 md:px-8 lg:px-0">
+      <div className="mx-auto flex max-w-[1200px] items-center justify-between px-4 py-3 sm:px-6 sm:py-4 md:px-8 lg:px-0">
         <a
           href="#"
-          className={`font-display text-xl font-bold transition-colors duration-300 ${
+          className={`font-display text-lg font-bold transition-colors duration-300 sm:text-xl ${
             scrolled ? "text-text-primary" : "text-white"
           }`}
           aria-label="achadoAI - Voltar ao topo"
@@ -113,13 +113,13 @@ export function Navbar() {
       </div>
 
       {mobileOpen && (
-        <div className="max-h-[calc(100svh-4.5rem)] overflow-y-auto border-t border-border-light bg-white px-6 py-4 md:hidden animate-fade-in">
+        <div className="max-h-[calc(100svh-4rem)] overflow-y-auto border-t border-border-light bg-white px-4 py-4 sm:px-6 md:hidden animate-fade-in">
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className={`font-body text-base py-2 transition-colors duration-150 ${
+                className={`font-body text-base py-3 transition-colors duration-150 ${
                   activeSection === link.href.replace("#", "")
                     ? "text-green-accent font-semibold"
                     : "text-text-secondary hover:text-text-primary"
@@ -134,7 +134,7 @@ export function Navbar() {
               data-track-event="cta_click"
               data-track-section="navbar_mobile"
               data-track-type="diagnostico"
-              className="mt-2 inline-flex min-h-[44px] items-center justify-center rounded-lg bg-gradient-to-r from-emerald-start to-green-cta px-5 py-3 font-display text-base font-semibold text-white transition-all duration-200 hover:from-green-hover hover:to-green-cta-hover cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-accent focus-visible:ring-offset-2"
+              className="mt-2 inline-flex min-h-[44px] w-full items-center justify-center rounded-lg bg-gradient-to-r from-emerald-start to-green-cta px-5 py-3 font-display text-base font-semibold text-white transition-all duration-200 hover:from-green-hover hover:to-green-cta-hover cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-accent focus-visible:ring-offset-2"
               aria-label="Agendar diagnostico gratuito"
               onClick={() => setMobileOpen(false)}
             >

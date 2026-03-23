@@ -45,21 +45,21 @@ function BeforeCard({
   note: string;
 }) {
   return (
-    <div className="flex min-h-full flex-1 flex-col rounded-xl border border-border-light border-t-4 border-t-red-soft bg-[#f8fafc] shadow-[0_20px_50px_rgba(15,23,42,0.04)]">
-      <div className="px-5 pt-5">
+    <div className="flex min-h-full min-w-0 flex-1 flex-col rounded-xl border border-border-light border-t-4 border-t-red-soft bg-[#f8fafc] shadow-[0_20px_50px_rgba(15,23,42,0.04)]">
+      <div className="px-4 pt-4 sm:px-5 sm:pt-5">
         <StatusBadge label={label} tone="warning" />
       </div>
 
-      <div className="flex flex-1 flex-col px-5 pt-5 pb-5">
-        <div className="flex items-center rounded-full border border-border-light bg-white/80 px-4 py-2.5">
+      <div className="flex flex-1 flex-col px-4 pb-4 pt-4 sm:px-5 sm:pb-5 sm:pt-5">
+        <div className="flex items-center rounded-full border border-border-light bg-white/80 px-3.5 py-2 sm:px-4 sm:py-2.5">
           <Search className="h-4 w-4 shrink-0 text-text-placeholder" />
           <span className="ml-2 font-body text-sm text-text-placeholder">
             {searchQuery}
           </span>
         </div>
 
-        <div className="mt-6 flex-1 rounded-[22px] border border-white/80 bg-white/70 p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)]">
-          <div className="space-y-5">
+        <div className="mt-5 flex-1 rounded-[22px] border border-white/80 bg-white/70 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)] sm:mt-6 sm:p-5">
+          <div className="space-y-4 sm:space-y-5">
             {searchResults.map((result, index) => (
               <div
                 key={`${result.titleWidth}-${index}`}
@@ -78,7 +78,7 @@ function BeforeCard({
           </div>
         </div>
 
-        <div className="mt-5 flex items-center gap-2">
+        <div className="mt-4 flex items-center gap-2 sm:mt-5">
           <svg
             width="16"
             height="16"
@@ -101,7 +101,7 @@ function BeforeCard({
               fill="none"
             />
           </svg>
-          <span className="font-body text-sm font-medium text-red-soft">
+          <span className="font-body text-xs font-medium text-red-soft sm:text-sm">
             {note}
           </span>
         </div>
@@ -198,7 +198,7 @@ function DesktopAnnotation() {
 
 function MobileAnnotation() {
   return (
-    <div className="mt-4 flex items-start justify-end gap-2 px-5 lg:hidden">
+    <div className="mt-4 flex items-start justify-end gap-2 px-4 sm:px-5 lg:hidden">
       <svg
         className="mt-1 h-10 w-14 shrink-0"
         viewBox="0 0 56 40"
@@ -226,7 +226,7 @@ function MobileAnnotation() {
           markerEnd="url(#before-after-arrow-mobile)"
         />
       </svg>
-      <p className="max-w-[180px] text-right font-body text-[13px] font-medium leading-snug text-green-accent">
+      <p className="max-w-[160px] text-right font-body text-xs font-medium leading-snug text-green-accent sm:max-w-[180px] sm:text-[13px]">
         Sua marca recomendada pela IA
       </p>
     </div>
@@ -247,21 +247,21 @@ function AfterCard({
   note: string;
 }) {
   return (
-    <div className="relative flex min-h-full flex-1 flex-col rounded-xl border border-border-light border-t-4 border-t-green-accent bg-white shadow-[0_24px_60px_rgba(34,197,94,0.08)]">
+    <div className="relative flex min-h-full min-w-0 flex-1 flex-col rounded-xl border border-border-light border-t-4 border-t-green-accent bg-white shadow-[0_24px_60px_rgba(34,197,94,0.08)]">
       <DesktopAnnotation />
 
-      <div className="px-5 pt-5">
+      <div className="px-4 pt-4 sm:px-5 sm:pt-5">
         <StatusBadge label={label} tone="success" />
       </div>
 
       {/* Google Search Interface Mockup */}
-      <div className="mx-4 mt-4 mb-4 flex-1 overflow-hidden rounded-lg border border-[#dadce0] bg-white shadow-[0_1px_6px_rgba(32,33,36,0.08)]">
+      <div className="mx-3 mb-3 mt-3 flex-1 overflow-hidden rounded-lg border border-[#dadce0] bg-white shadow-[0_1px_6px_rgba(32,33,36,0.08)] sm:mx-4 sm:mb-4 sm:mt-4">
         {/* Google Header */}
-        <div className="border-b border-[#ebebeb] px-4 pt-3.5 pb-0">
+        <div className="border-b border-[#ebebeb] px-3.5 pb-0 pt-3 sm:px-4 sm:pt-3.5">
           <GoogleLogo />
 
           {/* Search Bar */}
-          <div className="mt-3 flex items-center gap-2 rounded-full border border-[#dfe1e5] bg-white px-3.5 py-2 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+          <div className="mt-3 flex items-center gap-2 rounded-full border border-[#dfe1e5] bg-white px-3 py-2 shadow-[0_1px_3px_rgba(0,0,0,0.04)] sm:px-3.5">
             <Search className="h-3.5 w-3.5 shrink-0 text-[#9aa0a6]" />
             <span className="flex-1 truncate text-[13px] text-[#202124]">
               {searchQuery}
@@ -270,7 +270,7 @@ function AfterCard({
           </div>
 
           {/* Tabs */}
-          <div className="mt-2.5 flex gap-4 text-[11px]">
+          <div className="mt-2.5 flex gap-3 text-[10px] sm:gap-4 sm:text-[11px]">
             <span className="-mb-px border-b-[3px] border-[#1a73e8] pb-2.5 font-medium text-[#1a73e8]">
               Tudo
             </span>
@@ -284,7 +284,7 @@ function AfterCard({
         </div>
 
         {/* AI Overview Section */}
-        <div className="bg-gradient-to-b from-[#f5f3ff] via-[#faf9ff] to-white px-4 pt-3.5 pb-4">
+        <div className="bg-gradient-to-b from-[#f5f3ff] via-[#faf9ff] to-white px-3.5 pb-4 pt-3 sm:px-4 sm:pt-3.5">
           <div className="mb-2.5 flex items-center gap-1.5">
             <AIOverviewSparkle />
             <span className="bg-gradient-to-r from-[#4285F4] via-[#9b72cb] to-[#d96570] bg-clip-text text-[13px] font-semibold text-transparent">
@@ -300,7 +300,7 @@ function AfterCard({
             {responses.map((response, index) => (
               <div
                 key={`${response.name}-${index}`}
-                className={`rounded-lg px-2.5 py-2 text-[12px] leading-relaxed ${
+                className={`rounded-lg px-2.5 py-2 text-[11px] leading-relaxed sm:text-[12px] ${
                   response.highlighted
                     ? "border-l-[3px] border-green-accent bg-green-accent/[0.06]"
                     : ""
@@ -352,7 +352,7 @@ function AfterCard({
       <MobileAnnotation />
 
       {/* Bottom note */}
-      <div className="mt-auto px-5 pb-5">
+      <div className="mt-auto px-4 pb-4 sm:px-5 sm:pb-5">
         <div className="flex items-center gap-2">
           <svg
             width="16"
@@ -377,7 +377,7 @@ function AfterCard({
               fill="none"
             />
           </svg>
-          <span className="font-body text-sm font-medium text-green-accent">
+          <span className="font-body text-xs font-medium text-green-accent sm:text-sm">
             {note}
           </span>
         </div>
@@ -390,7 +390,7 @@ export function BeforeAfterChat() {
   const { before, after } = beforeAfterData;
 
   return (
-    <div className="flex flex-col gap-6 lg:flex-row lg:items-stretch lg:gap-8">
+    <div className="flex flex-col gap-4 sm:gap-6 lg:flex-row lg:items-stretch lg:gap-8">
       <BeforeCard
         label={before.label}
         searchQuery={before.searchQuery}
@@ -401,7 +401,7 @@ export function BeforeAfterChat() {
         className="flex items-center justify-center self-center text-green-accent lg:self-auto"
         aria-hidden="true"
       >
-        <ArrowRight className="h-9 w-9 rotate-90 lg:rotate-0" strokeWidth={2} />
+        <ArrowRight className="h-8 w-8 rotate-90 lg:h-9 lg:w-9 lg:rotate-0" strokeWidth={2} />
       </div>
 
       <AfterCard

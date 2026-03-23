@@ -37,7 +37,7 @@ export function StatCard({ stat, index }: StatCardProps) {
       {/* Top accent gradient line */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-green-accent/25 to-transparent opacity-50 transition-opacity duration-500 group-hover:opacity-100" />
 
-      <div className="flex h-full flex-col p-5 sm:p-6">
+      <div className="flex h-full flex-col p-4 sm:p-6">
         {/* Step number + label */}
         <div className="flex items-start gap-3">
           <span className="flex-shrink-0 font-mono text-xs font-medium tabular-nums text-green-accent/30">
@@ -49,27 +49,27 @@ export function StatCard({ stat, index }: StatCardProps) {
         </div>
 
         {/* Hero number */}
-        <div className="relative my-5 flex items-baseline justify-center gap-1 sm:my-6">
+        <div className="relative my-4 flex items-baseline justify-center gap-1 sm:my-6">
           {/* Soft glow behind number */}
           <div className="pointer-events-none absolute left-1/2 top-1/2 h-24 w-36 -translate-x-1/2 -translate-y-1/2 rounded-full bg-green-accent/[0.05] blur-3xl transition-all duration-700 group-hover:bg-green-accent/[0.08]" />
           <span
-            className="relative font-mono text-[3.5rem] font-bold leading-none tracking-tighter text-gradient-green sm:text-7xl"
+            className="relative font-mono text-[3rem] font-bold leading-none tracking-tighter text-gradient-green sm:text-[3.5rem] md:text-7xl"
             style={{ fontVariantNumeric: "tabular-nums" }}
           >
             {animatedNumber}
           </span>
-          <span className="relative mb-1 text-lg font-semibold text-green-accent/60 sm:text-xl">
+          <span className="relative mb-1 text-base font-semibold text-green-accent/60 sm:text-xl">
             {stat.suffix}
           </span>
         </div>
 
         {/* Description */}
-        <p className="text-[14px] leading-relaxed text-slate-300/90">
+        <p className="text-[13px] leading-relaxed text-slate-300/90 sm:text-[14px]">
           {renderDescription(stat.description)}
         </p>
 
         {/* Source */}
-        <cite className="mt-auto pt-5 font-body text-xs not-italic text-slate-500/80">
+        <cite className="mt-auto pt-4 font-body text-xs not-italic text-slate-500/80 sm:pt-5">
           <a
             href={stat.sourceUrl}
             target="_blank"

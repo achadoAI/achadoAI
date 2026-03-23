@@ -91,13 +91,13 @@ const stepIcons = [SearchIcon, WrenchIcon, BarChartIcon, CheckCircleIcon] as con
 
 export default function HowItWorksSection() {
   return (
-    <section id="como-funciona" className="scroll-mt-20 bg-bg-alt py-16 md:py-24">
-      <div className="mx-auto max-w-[1200px] px-6 md:px-8 lg:px-0">
+    <section id="como-funciona" className="scroll-mt-20 bg-bg-alt py-12 sm:py-14 md:py-24">
+      <div className="mx-auto max-w-[1200px] px-4 sm:px-6 md:px-8 lg:px-0">
         <div className="text-center">
-          <h2 className="font-display text-[28px] font-bold leading-[1.2] text-text-primary md:text-4xl lg:text-[40px]">
+          <h2 className="font-display text-2xl font-bold leading-[1.15] text-text-primary sm:text-[28px] md:text-4xl lg:text-[40px]">
             {processHeadline}
           </h2>
-          <p className="mt-4 font-body text-base text-text-secondary md:text-lg">
+          <p className="mt-3 font-body text-sm text-text-secondary sm:mt-4 sm:text-base md:text-lg">
             {processSubtitle}
           </p>
         </div>
@@ -245,7 +245,7 @@ export default function HowItWorksSection() {
           role="list"
           aria-label="Etapas do processo"
         >
-          <div className="relative ml-7">
+          <div className="relative ml-5 sm:ml-6">
             <div
               className="absolute bottom-0 left-0 top-0 w-0.5 bg-border-light"
               aria-hidden="true"
@@ -264,14 +264,14 @@ export default function HowItWorksSection() {
                   key={step.number}
                   role="listitem"
                   aria-label={`Etapa ${step.number}: ${step.title}`}
-                  className={`process-step is-visible relative flex gap-5 ${
+                  className={`process-step is-visible relative flex gap-4 sm:gap-5 ${
                     index < processSteps.length - 1 ? "pb-8" : ""
                   }`}
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
-                  <div className="relative -ml-7 shrink-0">
+                  <div className="relative -ml-5 shrink-0 sm:-ml-6">
                     <div
-                      className={`flex h-14 w-14 items-center justify-center rounded-full ${
+                      className={`flex h-12 w-12 items-center justify-center rounded-full sm:h-14 sm:w-14 ${
                         isLast
                           ? "bg-green-accent text-white"
                           : "bg-green-accent/10 text-green-accent"
@@ -285,7 +285,7 @@ export default function HowItWorksSection() {
                   </div>
 
                   <div className="pt-1">
-                    <h3 className="font-display text-lg font-semibold text-text-primary">
+                    <h3 className="font-display text-base font-semibold text-text-primary sm:text-lg">
                       {step.title}
                     </h3>
                     <p className="mt-1 font-body text-sm leading-relaxed text-text-secondary">
@@ -307,7 +307,7 @@ export default function HowItWorksSection() {
             data-track-event="cta_click"
             data-track-section="how_it_works"
             data-track-type="diagnostico"
-            className="inline-flex min-h-[44px] items-center justify-center rounded-lg bg-green-accent px-8 py-4 font-display text-base font-semibold text-white transition-all duration-150 hover:scale-[1.02] hover:bg-green-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-accent focus-visible:ring-offset-2"
+            className="inline-flex min-h-[44px] w-full items-center justify-center rounded-lg bg-green-accent px-6 py-4 font-display text-base font-semibold text-white transition-all duration-150 hover:scale-[1.02] hover:bg-green-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-accent focus-visible:ring-offset-2 sm:w-auto sm:px-8"
             aria-label="Agendar diagnóstico gratuito"
           >
             {processCta}

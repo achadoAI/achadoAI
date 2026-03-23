@@ -25,10 +25,10 @@ export function SectionWrapper({
   return (
     <section
       id={id}
-      className={`scroll-mt-20 py-16 md:py-24 ${bgClass} ${className}`}
+      className={`scroll-mt-20 py-12 sm:py-14 md:py-24 ${bgClass} ${className}`}
     >
       <div
-        className={`mx-auto max-w-[1200px] px-6 md:px-8 lg:px-0 ${containerClassName}`}
+        className={`mx-auto max-w-[1200px] px-4 sm:px-6 md:px-8 lg:px-0 ${containerClassName}`}
       >
         {children}
       </div>
