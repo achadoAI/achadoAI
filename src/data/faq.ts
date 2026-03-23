@@ -9,7 +9,7 @@ export const faqItems: FAQItem[] = [
     id: "seo_ja_faz",
     question: "Minha agência de SEO já faz isso.",
     answer:
-      "Provavelmente não. SEO otimiza para rankings em resultados de busca tradicionais. GEO otimiza para citações dentro de respostas geradas por IA. São sinais técnicos diferentes, plataformas diferentes e métricas diferentes. Pergunte à sua agência: \u201Cqual o nosso Share of Voice no ChatGPT?\u201D Se não souberem responder, esse é exatamente o gap que cobrimos. Trabalhamos como complemento, não como substituto da sua operação de SEO.",
+      "Provavelmente não. SEO otimiza para rankings em resultados de busca tradicionais. GEO otimiza para citações dentro de respostas geradas por IA. São sinais técnicos diferentes, plataformas diferentes e métricas diferentes. Pergunte à sua agência: “qual o nosso Share of Voice no ChatGPT?” Se não souberem responder, esse é exatamente o gap que cobrimos. Trabalhamos como complemento, não como substituto da sua operação de SEO.",
   },
   {
     id: "trafego_pequeno",
@@ -21,7 +21,7 @@ export const faqItems: FAQItem[] = [
     id: "medir_roi",
     question: "Não consigo medir o ROI.",
     answer:
-      'Consegue. Medimos Share of Voice (quantas vezes sua marca aparece vs. concorrentes), Citation Rate (frequência com que seus links são citados como fonte) e Prompt Coverage (em quantas perguntas relevantes sua marca aparece). São métricas rastreáveis e comparáveis mês a mês. Além disso, cruzamos dados do Google Search Console com AI Overviews para estimar o tráfego que você está perdendo para respostas de IA em reais. Você recebe um relatório mensal com evolução clara.',
+      "Consegue. Medimos Share of Voice (quantas vezes sua marca aparece vs. concorrentes), Citation Rate (frequência com que seus links são citados como fonte) e Prompt Coverage (em quantas perguntas relevantes sua marca aparece). São métricas rastreáveis e comparáveis mês a mês. Além disso, cruzamos dados do Google Search Console com AI Overviews para estimar o tráfego que você está perdendo para respostas de IA em reais. Você recebe um relatório mensal com evolução clara.",
   },
   {
     id: "esperar_mercado",
@@ -39,7 +39,7 @@ export const faqItems: FAQItem[] = [
     id: "custo_tempo",
     question: "Quanto custa e em quanto tempo vejo resultado?",
     answer:
-      "O Local GEO começa em R$ 1.900/mês e o GEO Core em R$ 3.500/mês. O Programa Pioneiro oferece desconto significativo com setup isento. Os primeiros quick wins técnicos aparecem em 4 semanas. Resultados consistentes de visibilidade em IA levam de 3 a 6 meses, dependendo do ponto de partida e da competitividade do segmento. O diagnóstico gratuito define o escopo exato e o valor final antes de qualquer compromisso.",
+      "O Local GEO começa em R$ 2.200/mês e o GEO Core em R$ 4.200/mês. O Programa Pioneiro oferece desconto significativo com setup isento. Os primeiros quick wins técnicos aparecem em 4 semanas. Resultados consistentes de visibilidade em IA levam de 3 a 6 meses, dependendo do ponto de partida e da competitividade do segmento. O diagnóstico gratuito define o escopo exato e o valor final antes de qualquer compromisso.",
   },
   {
     id: "cancelar",
@@ -74,7 +74,7 @@ export const faqSchema = {
       name: "Quanto custa o serviço de GEO da achadoAI?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "O Local GEO começa em R$1.900/mês e o GEO Core em R$3.500/mês. O Programa Pioneiro oferece desconto significativo com setup isento para os primeiros 5 clientes. O diagnóstico gratuito define o escopo e valor final.",
+        text: "O Local GEO começa em R$2.200/mês e o GEO Core em R$4.200/mês. O Programa Pioneiro oferece desconto significativo com setup isento para os primeiros 5 clientes. O diagnóstico gratuito define o escopo e valor final.",
       },
     },
     {

@@ -332,9 +332,9 @@ export default function PricingSection() {
                     data-track-type="plan"
                     data-track-extra={JSON.stringify({ plan: plan.id })}
                     aria-label={`${plan.cta} para ${plan.name}`}
-                    className={`inline-flex min-h-11 w-full items-center justify-center rounded-xl border px-5 py-3 text-center font-display text-[16px] font-semibold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-accent focus-visible:ring-offset-2 ${
+                    className={`inline-flex min-h-11 w-full items-center justify-center rounded-xl border px-5 py-3 text-center font-display text-[16px] font-semibold transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-accent focus-visible:ring-offset-2 ${
                       isHighlighted
-                        ? "border-green-accent bg-green-accent text-white hover:border-green-hover hover:bg-green-hover"
+                        ? "border-transparent bg-gradient-to-r from-emerald-start to-green-cta text-white hover:from-green-hover hover:to-green-cta-hover cta-glow"
                         : "border-green-accent text-green-accent hover:bg-green-accent hover:text-white"
                     }`}
                   >

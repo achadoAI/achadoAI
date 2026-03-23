@@ -1,0 +1,32 @@
+saude_privada:
+  description: "Clínicas e consultórios de saúde privada"
+  categories:
+    - dermatologist
+    - dentist
+    - orthodontist
+    - ophthalmologist
+    - plastic_surgeon
+    - skin_care_clinic
+    - dental_clinic
+    - eye_care_center
+    - cosmetic_dentist
+    - nutritionist
+    - physiotherapist
+    - psychologist
+
+locations:
+  campinas:
+    name: "Campinas, SP"
+    lat: -22.9099
+    lon: -47.0626
+    radius_km: 15
+  sao_paulo:
+    name: "São Paulo, SP"
+    lat: -23.5505
+    lon: -46.6333
+    radius_km: 20
+  campinas_regiao:
+    name: "Região de Campinas"
+    lat: -22.9099
+    lon: -47.0626
+    radius_km: 40

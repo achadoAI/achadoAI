@@ -1,26 +1,23 @@
 # achadoAI
 
-## Sobre
-achadoAI é uma agência de Generative Engine Optimization (GEO) e Answer Engine Optimization (AEO) baseada em Campinas, SP, Brasil. Fundada por Rafael. Otimiza a presença de marcas em plataformas de inteligência artificial.
+> Agência brasileira de Generative Engine Optimization (GEO) e Answer Engine Optimization (AEO) fundada em Campinas, SP. Otimizamos a presença de marcas em respostas de IA ChatGPT, Perplexity e Google AI Overviews.
 
-## Serviços
-- Diagnóstico de AI Visibility (ChatGPT, Google AI Overviews, Perplexity)
-- Entity Management (Wikidata, Knowledge Graph, sameAs, NAP)
-- Technical GEO Audit (schema, robots.txt, llms.txt, AI Readiness)
-- Monitoramento contínuo (Share of Voice, Citation Rate, Prompt Coverage)
-- Otimização de conteúdo para citação por IAs
+A achadoAI ajuda empresas a serem encontradas, compreendidas, citadas e recomendadas por plataformas de inteligência artificial. Nosso trabalho combina diagnóstico de AI Visibility, entity management, otimização técnica e monitoramento contínuo.
 
-## Público
-Marcas e negócios que investem em marketing digital e querem ser encontrados, citados e recomendados por plataformas de IA. Verticais: Saúde Privada, E-commerce, SaaS B2B, Serviços Locais.
+Métricas proprietárias: Share of Voice, Citation Rate e Prompt Coverage.
 
-## Localização
-Campinas, São Paulo, Brasil
+Serviços: diagnóstico AI Visibility 360°, otimização para citação em IA, entity management (Knowledge Graph, Wikidata, sameAs), monitoramento contínuo e análise competitiva em IA.
 
-## Contato
-- Site: https://achadoai.com.br
-- LinkedIn: https://www.linkedin.com/company/achadoai
+Verticais atendidas: saúde privada, e-commerce, SaaS B2B e serviços locais.
 
-## Pricing
-- Local GEO: R$1.900-2.500/mês + setup
-- GEO Core: R$3.500-5.000/mês + setup
-- Programa Pioneiro: condições especiais para primeiros clientes
+Fundador: Rafael. Localização: Campinas, SP, Brasil.
+
+## Recursos
+
+- [Site principal](https://achadoai.com.br): Home page com informações sobre serviços, diferenciais, pricing e FAQ
+- [LinkedIn](https://www.linkedin.com/company/achadoai): Perfil corporativo
+- [Email](mailto:contato@achadoai.com.br): Contato direto
+
+## Optional
+
+- [Política de Privacidade](https://achadoai.com.br/privacidade): Termos de uso e privacidade

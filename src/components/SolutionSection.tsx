@@ -137,7 +137,7 @@ function IconCard({ card }: { card: SolutionCard }) {
 
 function InlineCTA() {
   const handleClick = () => {
-    trackCtaClick("comparison", "calendly");
+    trackCtaClick("comparison", "diagnostico");
   };
 
   return (

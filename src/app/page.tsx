@@ -6,17 +6,26 @@ import { WhatIsGeoSection } from "@/components/WhatIsGeoSection";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
 import { DifferentialsGrid } from "@/components/DifferentialsGrid";
 import VerticalTabsSection from "@/components/sections/VerticalTabsSection";
-import SocialProof from "@/components/SocialProof";
 import PricingSection from "@/components/PricingSection";
 import { FAQ } from "@/components/FAQ";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
 import { FloatingMobileCTA } from "@/components/FloatingMobileCTA";
 import { AnalyticsTracker } from "@/components/AnalyticsTracker";
+import {
+  professionalServiceSchema,
+  serializeJsonLd,
+} from "@/data/seo";
 
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: serializeJsonLd(professionalServiceSchema),
+        }}
+      />
       <Navbar />
       <main>
         <Hero />
@@ -26,7 +35,6 @@ export default function HomePage() {
         <HowItWorksSection />
         <DifferentialsGrid />
         <VerticalTabsSection />
-        <SocialProof />
         <PricingSection />
         <FAQ />
         <FinalCTA />

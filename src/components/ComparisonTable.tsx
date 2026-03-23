@@ -3,17 +3,18 @@ import { comparisonData } from "@/data/solution";
 function CheckIcon() {
   return (
     <svg
-      width="16"
-      height="16"
-      viewBox="0 0 16 16"
+      width="18"
+      height="18"
+      viewBox="0 0 18 18"
       fill="none"
       aria-hidden="true"
-      className="mr-2 inline-block shrink-0"
+      className="mr-2 mt-0.5 inline-block shrink-0"
     >
+      <circle cx="9" cy="9" r="9" fill="rgba(34, 197, 94, 0.15)" />
       <path
-        d="M3 8.5L6.5 12L13 4"
+        d="M5.5 9.5L7.5 11.5L12.5 6.5"
         stroke="#22c55e"
-        strokeWidth="2"
+        strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -24,11 +25,13 @@ function CheckIcon() {
 export function ComparisonTable() {
   return (
     <div className="mx-auto max-w-[900px]">
+      {/* Desktop Table */}
       <div
-        className="hidden overflow-hidden rounded-2xl md:block"
+        className="hidden overflow-hidden rounded-2xl border border-border-light shadow-[0_2px_12px_rgba(0,0,0,0.04),0_8px_32px_rgba(0,0,0,0.06)] md:block"
         role="table"
         aria-label="Comparação entre Agência de SEO e achadoAI"
       >
+        {/* Header row */}
         <div className="grid grid-cols-[200px_1fr_1fr]" role="row">
           <div
             role="columnheader"
@@ -44,8 +47,13 @@ export function ComparisonTable() {
           </div>
           <div
             role="columnheader"
-            className="animate-navy-pulse rounded-tr-2xl border-l border-navy bg-navy px-6 py-5 font-display text-sm font-semibold text-white"
+            className="relative animate-navy-pulse rounded-tr-2xl border-l border-navy bg-navy px-6 py-5 font-display text-sm font-semibold text-white"
           >
+            {/* Green accent line on top of achadoAI column */}
+            <div
+              className="pointer-events-none absolute inset-x-0 top-0 h-[2px] rounded-tr-2xl bg-gradient-to-r from-green-accent/20 via-green-accent/70 to-green-accent/20"
+              aria-hidden="true"
+            />
             <span className="inline-flex items-center gap-2">
               <span className="inline-block rounded-md bg-green-accent/20 px-2.5 py-0.5 text-xs font-bold uppercase tracking-wide text-green-accent">
                 achadoAI
@@ -54,6 +62,7 @@ export function ComparisonTable() {
           </div>
         </div>
 
+        {/* Data rows */}
         {comparisonData.map((row, index) => (
           <div
             key={row.capability}
@@ -77,27 +86,33 @@ export function ComparisonTable() {
               role="cell"
               className="border-l border-navy bg-navy px-6 py-4 font-body text-sm text-white/90"
             >
-              <CheckIcon />
-              {row.achadoai}
+              <span className="flex items-start">
+                <CheckIcon />
+                <span>{row.achadoai}</span>
+              </span>
             </div>
           </div>
         ))}
 
+        {/* Bottom cap with green accent */}
         <div className="grid grid-cols-[200px_1fr_1fr]" aria-hidden="true">
           <div className="h-1 bg-white" />
           <div className="h-1 border-l border-border-light bg-bg-alt" />
-          <div className="h-1 rounded-br-2xl border-l border-navy bg-navy" />
+          <div className="relative h-1 rounded-br-2xl border-l border-navy bg-navy">
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[2px] rounded-br-2xl bg-gradient-to-r from-green-accent/20 via-green-accent/50 to-green-accent/20" />
+          </div>
         </div>
       </div>
 
+      {/* Mobile cards */}
       <div className="flex flex-col gap-4 md:hidden">
         {comparisonData.map((row, index) => (
           <div
             key={row.capability}
-            className="animate-stagger-row overflow-hidden rounded-xl"
+            className="animate-stagger-row overflow-hidden rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.06)]"
             style={{ animationDelay: `${index * 100}ms` }}
           >
-            <div className="rounded-t-xl border border-border-light border-b-0 bg-white px-4 py-3">
+            <div className="rounded-t-xl border border-b-0 border-border-light bg-white px-4 py-3">
               <span className="font-display text-sm font-bold text-text-primary">
                 {row.capability}
               </span>
@@ -113,10 +128,17 @@ export function ComparisonTable() {
             </div>
 
             <div
-              className={`rounded-b-xl bg-navy px-4 py-3 ${
+              className={`relative rounded-b-xl bg-navy px-4 py-3 ${
                 index === 0 ? "animate-navy-pulse" : ""
               }`}
             >
+              {/* Subtle green top line on mobile too */}
+              {index === 0 && (
+                <div
+                  className="pointer-events-none absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-green-accent/40 to-transparent"
+                  aria-hidden="true"
+                />
+              )}
               <span className="font-body text-xs font-bold uppercase tracking-wide text-green-accent">
                 achadoAI
               </span>

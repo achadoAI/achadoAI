@@ -306,7 +306,7 @@ export default function HowItWorksSection() {
             href={CALENDLY_URL}
             data-track-event="cta_click"
             data-track-section="how_it_works"
-            data-track-type="calendly"
+            data-track-type="diagnostico"
             className="inline-flex min-h-[44px] items-center justify-center rounded-lg bg-green-accent px-8 py-4 font-display text-base font-semibold text-white transition-all duration-150 hover:scale-[1.02] hover:bg-green-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-accent focus-visible:ring-offset-2"
             aria-label="Agendar diagnóstico gratuito"
           >

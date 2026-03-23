@@ -1,13 +1,17 @@
+import { CALENDLY_URL, CONTACT_EMAIL_URL } from "@/lib/constants";
+
 export const heroContent = {
-  headline: "Seja a marca que a IA recomenda.",
+  badge: "AI Visibility Platform",
+  headlinePrefix: "Sua marca,",
+  headlineHighlight: "citada e recomendada por IAs.",
   subtitle:
-    "58% dos consumidores já usam ChatGPT, Perplexity e Google AI para descobrir produtos e serviços. Otimizamos sua presença nessas plataformas para que sua marca seja citada, recomendada e escolhida. Não a do concorrente.",
+    "Fazemos sua marca entrar nas respostas que influenciam a decisão do cliente.",
   ctaPrimary: "Agendar diagnóstico gratuito →",
-  ctaSecondary: "Ou fale pelo WhatsApp",
+  ctaSecondary: "Ou fale por email",
   microcopy: "30 min · Sem compromisso · Análise personalizada",
   logoStripLabel: "Monitoramos sua marca em:",
-  calendlyUrl: "#agendar",
-  whatsappUrl: "#whatsapp",
+  calendlyUrl: CALENDLY_URL,
+  whatsappUrl: CONTACT_EMAIL_URL,
 };
 
 export const quickScanData = {
@@ -25,5 +29,6 @@ export const quickScanData = {
     ["partial", "not-found", "partial"],
   ] as ("found" | "not-found" | "partial")[][],
   score: 22,
-  summary: "Sua marca aparece em apenas 2 de 9 verificações. Concorrentes já estão visíveis.",
+  summary:
+    "Sua marca aparece em apenas 2 de 9 verificações. Concorrentes já estão visíveis.",
 };

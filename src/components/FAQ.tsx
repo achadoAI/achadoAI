@@ -1,4 +1,5 @@
 import { faqHeadline, faqSchema } from "@/data/faq";
+import { serializeJsonLd } from "@/data/seo";
 import { FAQAccordion } from "./FAQAccordion";
 import { SectionShell } from "./SectionShell";
 
@@ -7,7 +8,7 @@ export function FAQ() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(faqSchema) }}
       />
       <SectionShell id="faq" background="alt">
         <div className="text-center">

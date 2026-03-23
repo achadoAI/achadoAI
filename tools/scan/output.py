@@ -11,7 +11,7 @@ from rich.table import Table
 
 from scoring import classify_cell
 
-console = Console()
+console = Console(force_terminal=True)
 
 PLATFORM_LABELS = {
     "chatgpt": "ChatGPT",

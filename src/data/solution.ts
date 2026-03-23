@@ -5,7 +5,7 @@ export const solutionContent = {
   headlineGeoEnd: ".",
   tableIntro: "Na prática, a diferença é essa:",
   conclusion:
-    "As duas estratégias funcionam juntas. SEO traz tráfego de quem ainda clica. GEO captura quem já parou de clicar.",
+    "As duas estratégias funcionam juntas. SEO segue importante para tráfego. GEO ajuda sua marca a entrar na comparação, na shortlist e na decisão antes do clique.",
   cta: "Entender como GEO se aplica ao meu negócio →",
 };
 
@@ -26,13 +26,13 @@ export const solutionCards: SolutionCard[] = [
     icon: "message",
     title: "Respostas prontas",
     description:
-      "GEO otimiza sua presença dentro das respostas geradas por IA. Sinais, plataformas e métricas diferentes.",
+      "GEO otimiza sua presença dentro das respostas geradas por IA. O efeito prático é aparecer na comparação antes de o clique acontecer.",
   },
   {
     icon: "handshake",
     title: "Complemento, não substituto",
     description:
-      "As duas estratégias funcionam juntas. SEO traz quem ainda clica. GEO captura quem já parou de clicar.",
+      "As duas estratégias funcionam juntas. SEO traz quem ainda clica. GEO ajuda sua marca a entrar na decisão de quem já compara dentro da resposta.",
   },
 ];
 
@@ -46,26 +46,29 @@ export const comparisonData: ComparisonRow[] = [
   {
     capability: "Onde otimiza",
     seo: "Resultados do Google",
-    achadoai: "ChatGPT, Perplexity, Google AI Overviews",
+    achadoai: "Respostas no ChatGPT, Perplexity, Gemini e Google AI Overviews",
   },
   {
-    capability: "O que mede",
+    capability: "O que acompanha",
     seo: "Rankings, CTR, tráfego",
-    achadoai: "Share of Voice, Citation Rate, Prompt Coverage",
+    achadoai:
+      "Presença nas respostas, frequência de menção e cobertura das perguntas que influenciam compra",
   },
   {
     capability: "Como trabalha conteúdo",
     seo: "Para rankear em palavras-chave",
-    achadoai: "Para ser citado como fonte em respostas",
+    achadoai:
+      "Para sua marca entrar na comparação e ser usada como referência nas respostas",
   },
   {
     capability: "Schema e dados estruturados",
     seo: "Rich snippets básicos",
-    achadoai: "Knowledge Graph, Entity Management, sameAs",
+    achadoai:
+      "Mais clareza sobre quem é sua marca, o que ela oferece e por que a IA pode confiar nela",
   },
   {
     capability: "Resultado",
     seo: "Competir por posição na lista",
-    achadoai: "Ser a recomendação dentro da resposta",
+    achadoai: "Entrar na shortlist antes do clique e ganhar terreno na decisão",
   },
 ];

@@ -13,7 +13,7 @@ def query(client: DataForSEOClient, keyword: str, location_code: int, language_c
     """Query Perplexity via DataForSEO LLM Responses."""
     payload = [{
         "user_prompt": keyword,
-        "model_name": "sonar-reasoning",
+        "model_name": "sonar-reasoning-pro",
         "web_search": True,
         "web_search_country_iso_code": "BR",
         "temperature": 0.3,

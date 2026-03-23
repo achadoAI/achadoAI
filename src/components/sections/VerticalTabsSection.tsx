@@ -490,7 +490,7 @@ export default function VerticalTabsSection() {
       </div>
 
       <div
-        className="hide-scrollbar mt-10 flex snap-x snap-mandatory gap-2 overflow-x-auto pb-1 md:mt-12 md:justify-center md:snap-none md:gap-3 md:overflow-visible"
+        className="hide-scrollbar mt-10 flex snap-x snap-mandatory gap-2 overflow-x-auto pb-1 pr-6 md:mt-12 md:justify-center md:snap-none md:gap-3 md:overflow-visible md:pr-0"
         role="tablist"
         aria-label={"Verticais de atua\u00e7\u00e3o"}
       >
@@ -521,6 +521,9 @@ export default function VerticalTabsSection() {
           );
         })}
       </div>
+      <p className="mt-3 text-center font-body text-xs text-text-placeholder md:hidden">
+        Deslize para ver todas as verticais.
+      </p>
 
       <div className="mt-8 md:mt-10" style={{ minHeight: 460 }}>
         {VERTICALS.map((vertical, index) => {

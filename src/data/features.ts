@@ -1,7 +1,13 @@
 export interface Feature {
   title: string;
   description: string;
-  vizType: "matrix" | "trend" | "ranking" | "checklist" | "dashboard" | "entity-graph";
+  vizType:
+    | "matrix"
+    | "trend"
+    | "ranking"
+    | "checklist"
+    | "dashboard"
+    | "entity-graph";
 }
 
 export const features: Feature[] = [
@@ -43,6 +49,7 @@ export const features: Feature[] = [
   },
 ];
 
-export const featuresHeadline = "O que entregamos que nenhuma agência no Brasil oferece.";
+export const featuresHeadline =
+  "O que entregamos que nenhuma agência no Brasil oferece.";
 export const featuresSubtitle =
   "Diagnóstico, execução e monitoramento com métricas reais de AI Visibility. Não apenas relatórios. Resultado.";

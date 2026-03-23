@@ -1,6 +1,7 @@
 interface PlatformLogoStripProps {
   label?: string;
   className?: string;
+  variant?: "light" | "dark";
 }
 
 function GoogleAIOIcon() {
@@ -56,17 +57,22 @@ const platforms = [
   },
 ] as const;
 
-export function PlatformLogoStrip({ label, className = "" }: PlatformLogoStripProps) {
+export function PlatformLogoStrip({ label, className = "", variant = "light" }: PlatformLogoStripProps) {
+  const isDark = variant === "dark";
   return (
-    <div className={`flex flex-col items-center gap-4 ${className}`}>
-      {label && <p className="text-sm font-body text-text-placeholder">{label}</p>}
+    <div className={`flex flex-col items-center gap-4 lg:items-start ${className}`}>
+      {label && (
+        <p className={`text-sm font-body ${isDark ? "text-[#64748b]" : "text-text-placeholder"}`}>
+          {label}
+        </p>
+      )}
       <span className="sr-only">Google AI Overviews, ChatGPT e Perplexity.</span>
 
-      <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
+      <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 lg:justify-start">
         {platforms.map((platform) => (
           <div key={platform.id} className="flex items-center gap-2">
-            <span className={platform.iconClassName}>{platform.icon}</span>
-            <span className="text-sm font-body font-medium text-text-secondary">
+            <span className={isDark ? "text-[#94a3b8]" : platform.iconClassName}>{platform.icon}</span>
+            <span className={`text-sm font-body font-medium ${isDark ? "text-[#94a3b8]" : "text-text-secondary"}`}>
               {platform.name}
             </span>
           </div>

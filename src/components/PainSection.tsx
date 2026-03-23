@@ -61,7 +61,7 @@ export function PainSection() {
           href={CALENDLY_URL}
           variant="tertiary"
           ariaLabel="Quero saber como minha marca aparece hoje"
-          tracking={{ section: "pain", type: "calendly" }}
+          tracking={{ section: "pain", type: "diagnostico" }}
         >
           {painContent.cta}
         </CTAButton>

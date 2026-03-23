@@ -16,8 +16,8 @@ export const pricingTiers: PricingTier[] = [
     id: "local_geo",
     tier: "Local GEO",
     tag: "Para negócios locais",
-    price: "R$ 1.900 a 2.500/mês",
-    setup: "R$ 2.000 a 3.000 (único)",
+    price: "R$ 2.200/mês",
+    setup: "R$ 2.500 (único)",
     features: [
       "Diagnóstico de AI Visibility em 3 plataformas",
       "Entity Management (Google Meu Negócio, Bing Places, Apple Business Connect)",
@@ -35,8 +35,8 @@ export const pricingTiers: PricingTier[] = [
     id: "geo_core",
     tier: "GEO Core",
     tag: "Para marcas com ambição nacional",
-    price: "R$ 3.500 a 5.000/mês",
-    setup: "R$ 4.000 a 6.000 (único)",
+    price: "R$ 4.200/mês",
+    setup: "R$ 5.000 (único)",
     features: [
       "Monitoramento em 5+ plataformas de IA",
       "Análise competitiva contínua com ranking de SoV",

@@ -2,16 +2,20 @@
   "permissions": {
     "allow": [
       "Bash(grep:*)",
-      "mcp__playwright__browser_evaluate",
-      "mcp__playwright__browser_take_screenshot",
-      "mcp__playwright__browser_resize",
-      "mcp__playwright__browser_navigate",
       "Bash(python -c \"import config; print\\(''config OK''\\)\")",
       "Bash(python -c \"from platforms.base import DataForSEOClient; print\\(''base OK''\\)\")",
       "Bash(python -c \"from platforms import chatgpt, gemini, perplexity, google_aio; print\\(''platforms OK''\\)\")",
       "Bash(python -c \"import detection; print\\(''detection OK''\\)\")",
       "Bash(python -c \"import scoring; print\\(''scoring OK''\\)\")",
-      "Bash(python -c \"import output; print\\(''output OK''\\)\")"
+      "Bash(python -c \"import output; print\\(''output OK''\\)\")",
+      "WebSearch",
+      "WebFetch(domain:docs.dataforseo.com)",
+      "Bash(python scan.py --brand \"achadoAI\" --domain \"achadoai.com.br\" --keywords \"agência geo brasil\" \"otimização para ia generativa\" \"geo aeo brasil\" --city \"Campinas\")",
+      "Bash(python fetch_prospects.py --categories dermatologist --location campinas)",
+      "Bash(python fix_csv.py output/prospects_20260317_214619.csv)",
+      "Bash(python filtrar_prospects.py prospects_20260317_214619_fixed.csv)",
+      "Bash(xargs head:*)",
+      "Bash(npm run:*)"
     ]
   }
 }

@@ -1,7 +1,11 @@
 """achadoAI Scan — CLI tool for AI visibility analysis."""
 
-import argparse
 import sys
+
+sys.stdout.reconfigure(encoding="utf-8")
+sys.stderr.reconfigure(encoding="utf-8")
+
+import argparse
 from typing import Any
 
 from rich.console import Console

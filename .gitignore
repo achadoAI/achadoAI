@@ -47,3 +47,20 @@ tools/scan/__pycache__/
 tools/scan/platforms/__pycache__/
 tools/scan/.venv/
 *.pyc
+
+# Prospects tool
+tools/prospects/output/
+tools/prospects/__pycache__/
+
+# Documentos internos / contexto estratégico
+contexto-llm-lp.md
+lp-achadoai-consolidado.md
+referencias-visuais-lp-achadoai.md
+spec-lp-achadoai.md
+contexto/
+
+# Ferramentas e configs locais de agentes/IDE
+.agent/
+.agents/
+.claude/
+.playwright-mcp/

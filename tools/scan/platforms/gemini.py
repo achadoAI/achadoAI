@@ -14,7 +14,7 @@ def query(client: DataForSEOClient, keyword: str, location_code: int, language_c
     payload = [{
         "keyword": keyword,
         "location_code": location_code,
-        "language_code": language_code,
+        "language_code": "pt-BR" if language_code == "pt" else language_code,
     }]
 
     data = client.post(ENDPOINT, payload)

@@ -1,55 +1,53 @@
-# achadoAI Landing Page
+# CLAUDE.md
 
-Single-page landing page em Next.js 15 (App Router) + Tailwind CSS 4 + TypeScript. Deploy na Vercel.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Comandos
+## Project
 
-- `npm run dev` — Dev server (port 3000)
-- `npm run build` — Build de produção
-- `npm run lint` — Linter
+Institutional landing page for achadoAI — a GEO/AEO agency that helps brands appear in AI-generated responses (ChatGPT, Perplexity, Google AI Overviews). Mostly static, no real backend yet (auth is mocked).
 
-## Arquitetura
+## Commands
 
-```
-src/
-├── app/           # layout.tsx (meta/schema/fonts) + page.tsx (composição das seções)
-├── components/    # Um componente por arquivo, named exports
-├── data/          # Toda copy e conteúdo textual (stats, features, pricing, faq, verticals)
-├── lib/           # Hooks (useInView, useCounterAnimation) e constants
+```bash
+npm run dev      # Start dev server (Next.js 16.2)
+npm run build    # Production build
+npm run lint     # ESLint
 ```
 
-## Regras de código
+No test framework is configured.
 
-- TypeScript strict. Sem `any`.
-- Functional components only. Named exports, não default.
-- `'use client'` apenas em componentes com interatividade (accordion, tabs, counter, intersection observer, floating CTA). Tudo que puder ser Server Component, deve ser.
-- Toda copy vem de `src/data/*.ts`. Nunca hardcode texto nos componentes.
-- CSS: Tailwind utilities apenas. Sem CSS modules, sem styled-components. Custom CSS só em `globals.css` para variables e keyframes.
-- Animações: CSS only (@keyframes + transition). Sem Framer Motion, GSAP ou libs JS. Usar Intersection Observer para scroll-triggered.
-- Ícones: SVG inline ou lucide-react. Sem icon fonts, sem imagens externas.
-- Touch targets ≥ 44px em mobile. Contraste ≥ 4.5:1 (WCAG AA).
-- `aria-label` em todos os links e botões interativos.
-- `id` em cada `<section>` para navegação interna.
+## Stack
 
-## Padrões de componentes
+- Next.js 16.2 (App Router) + React 19 + TypeScript 5
+- Tailwind CSS 4 (via @tailwindcss/postcss, no separate config file — tokens in globals.css `:root` + `@theme inline`)
+- React Compiler enabled (`reactCompiler: true` in next.config.ts)
+- Fonts: Plus Jakarta Sans (display), Inter (body), JetBrains Mono (mono) via `next/font/google`
+- Icons: lucide-react
+- No component library — all custom components
 
-- `SectionWrapper` — wrapper padrão com max-width, padding, fade-in-up. Usar em todas as seções.
-- `CTAButton` — aceita variant (primary/secondary/tertiary), href, children. Reutilizar em toda a página.
-- Hooks em `src/lib/`: `useInView(threshold?)` retorna `[ref, isInView]`. `useCounterAnimation(target, duration?)` retorna valor atual.
+## Architecture
 
-## Documentos de referência
+**Content/presentation split:** Static copy lives in `src/data/*.ts`, components in `src/components/`. The home page (`src/app/page.tsx`) is pure composition of section components — keep it that way.
 
-- `spec-lp-achadoai.md` — Copy completa, specs de componentes, schemas, meta tags, dados
-- `referencias-visuais-lp-achadoai.md` — Direção visual, padrões de design, referências
+**Server-first:** Default to Server Components. Only add `"use client"` when using browser APIs, effects, observers, or tracking. Before creating a new client component, check if existing ones already handle the behavior.
 
-Ao ter dúvida sobre copy, visual ou spec técnico, consulte estes documentos. Não invente.
+**Analytics:** Centralized in `src/lib/analytics.ts` with event delegation via `AnalyticsTracker`. CTAButton uses `data-track-*` attributes. Reuse the existing tracking system rather than adding new global listeners.
 
-## Erros comuns a evitar
+**Design tokens:** Defined as CSS custom properties in `src/app/globals.css` and mapped to Tailwind via `@theme inline`. Key colors: `--navy` (#0f1629), `--green-accent` (#22c55e). Custom animation classes (`.animate-fade-in-up`, `.cta-glow`, etc.) are in globals.css with `prefers-reduced-motion` support.
 
-- NÃO usar `Inter` como fonte de headlines — headlines usam `Plus Jakarta Sans 700`
-- NÃO esquecer `font-display: swap` nas fonts
-- NÃO usar gradientes purple/blue — paleta é navy + verde (ver spec seção 4.2)
-- NÃO colocar ❌ na coluna "Agência de SEO" da comparison table — posicionamento é "complemento", não ataque
-- NÃO inventar depoimentos — usar placeholder honesto conforme spec
-- NÃO usar escassez fabricada — "5 vagas" do Pioneiro é real (capacidade de fundador solo)
-- NÃO importar libs não listadas no stack (ver prompt de build)
+**Routing:** `/` (home), `/privacidade` (privacy). Dynamic `robots.ts` and `sitemap.ts`. OG/Twitter images generated via `opengraph-image.tsx`.
+
+**SEO:** Metadata in layout.tsx, JSON-LD schemas (Organization in root layout, ProfessionalService in home page). When changing copy, also check `metadata` and related `src/data/` files.
+
+## Conventions
+
+- Use `@/*` path alias for all imports (maps to `./src/*`)
+- Keep the dependency count minimal — avoid adding packages without clear need
+- Before changing Next.js behavior, consult docs in `node_modules/next/dist/docs/` (training data may be outdated for Next.js 16.x)
+- All text content is in Portuguese (pt-BR)
+- Animations must respect `prefers-reduced-motion`
+
+## Python Tools (separate from the Next.js app)
+
+- `tools/scan/` — AI visibility scanner CLI using DataForSEO API
+- `tools/prospects/` — Prospect data fetching/filtering scripts

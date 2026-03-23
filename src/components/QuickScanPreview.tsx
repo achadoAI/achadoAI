@@ -93,7 +93,7 @@ export function QuickScanPreview() {
   return (
     <div
       ref={ref as React.RefObject<HTMLDivElement>}
-      className="w-full max-w-[480px] overflow-hidden rounded-xl border border-border-light bg-white shadow-lg shadow-navy/5"
+      className="w-full max-w-[480px] overflow-hidden rounded-xl border border-white/10 bg-white shadow-2xl shadow-black/20"
     >
       {/* Header */}
       <div className="bg-navy px-5 py-4">

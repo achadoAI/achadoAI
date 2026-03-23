@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 96" role="img" aria-labelledby="title desc">
+  <title id="title">achadoAI</title>
+  <desc id="desc">Logotipo tipográfico da achadoAI.</desc>
+  <rect width="320" height="96" rx="20" fill="#1a1f36"/>
+  <text
+    x="28"
+    y="60"
+    fill="#f8fafc"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="40"
+    font-weight="700"
+  >
+    achado
+  </text>
+  <text
+    x="190"
+    y="60"
+    fill="#22c55e"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="40"
+    font-weight="700"
+  >
+    AI
+  </text>
+</svg>
